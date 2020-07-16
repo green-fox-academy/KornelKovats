@@ -1,3 +1,5 @@
+
+
 // Prints a string to the terminal window
 console.log('Hello world!');
 
@@ -191,3 +193,97 @@ if (jj%3==0||jj%5==0){
 }else {
     console.log(false);
 }
+
+
+// Write a program that stores 3 sides of a cuboid as variables (floats)
+// The program should write the surface area and volume of the cuboid like:
+//
+// Surface Area: 600
+// Volume: 1000
+
+console.log("give me the first side: ");
+
+
+
+let side2: number = 30;
+let side3: number = 40;
+
+
+
+
+// Write a program that prints the remaining seconds (as an integer) from a
+// day if the current time is represented by these variables
+
+let currentHours: number = 14;
+let currentMinutes: number = 34;
+let currentSeconds: number = 42;
+
+
+let sumSecs = (24*60*60+34*60+42) - (14*60*60+34*60+42);
+
+console.log(sumSecs);
+
+
+let a2: number = 24;
+let out: number = 0;
+
+// if a2 is even increment out by one
+if (a2%2==0){
+    out++;
+}
+
+console.log(out);
+
+let b2: number = 13;
+let out2: string = '';
+
+// if b2 is between 10 and 20 set out2 to "Sweet!"
+// if less than 10 set out2 to "Less!",
+// if more than 20 set out2 to "More!"
+if (b2>10&& b2<20) {
+    out2 = "Sweet";
+}
+console.log(out2);
+
+let c2: number = 123;
+let credits: number = 100;
+let isBonus: boolean = false;
+
+// if credits are at least 50,
+// and is_bonus is false decrement c2 by 2
+// if credits are smaller than 50,
+// and is_bonus is false decrement c2 by 1
+// if is_bonus is true c2 should remain the same
+
+if (credits<50 && isBonus==false) {
+    c2--;
+}
+else if (credits>=50 && isBonus==false) {
+    c2--;
+}
+
+
+
+console.log(c2);
+
+let d2: number =  8;
+let time: number = 120;
+let out3: string = '';
+
+// if d2 is dividable by 4
+// and time is not more than 200
+// set out3 to "check"
+// if time is more than 200
+// set out3 to "Time out"
+// otherwise set out3 to "Run Forest Run!"
+
+if (d2%4==0 && d2<=200){
+out3 = "check";
+}else if(d2>=200){
+    out3 = "Time out";
+}else{
+    out3 = "Run Forest Run!";
+}
+
+
+console.log(out3);
