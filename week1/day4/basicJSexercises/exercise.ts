@@ -287,3 +287,56 @@ out3 = "check";
 
 
 console.log(out3);
+
+
+//Create a program that writes this line 100 times:
+// "I won't cheat on the exam!"
+
+for (let i = 0; i < 100; i++) {
+    console.log("I won't cheat on the exam!");
+}
+
+// Create a program that prints all the even numbers between 0 and 500
+
+for (let i = 0; i <= 500; i++)
+{
+    if (i % 2 == 0)
+    {
+        console.log(i);
+    }
+}
+
+// Create a program that
+// prints the multiplication table with number
+//
+// Example:
+// The number 15 should print:
+//
+// 1 * 15 = 15
+// 2 * 15 = 30
+// 3 * 15 = 45
+// 4 * 15 = 60
+// 5 * 15 = 75
+// 6 * 15 = 90
+// 7 * 15 = 105
+// 8 * 15 = 120
+// 9 * 15 = 135
+// 10 * 15 = 150
+let theNumber: number = 30;
+
+for (let i = 0; i < 15; i++) {
+    console.log(i*theNumber);
+}
+// Write a program that calculates the sum and the average from 1 to a given number.
+// Example input: 5
+// Example output: Sum: 15, Average: 3
+let sum: number=0;
+let howmany: number = 0;
+
+for (let i = 0; i <= 7; i++) {
+    sum += i;
+
+    howmany=i;
+}
+console.log("the sum is: " + sum + " the average is: " + sum/howmany);
+
