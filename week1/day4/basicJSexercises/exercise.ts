@@ -390,7 +390,7 @@ console.log();
 // The pyramid should have as many lines as lineCount is
 
 
-let lineCount1: number = 2;
+let lineCount1: number = 7;
 
 let star2: string="";
 
@@ -410,6 +410,62 @@ for (let i = 0; i < lineCount1; i++) {
     }
     console.log(spacePrefix+ star2);
 
+
+
+}
+
+// Write a program that draws a
+// diamond like this:
+//
+//    *
+//   ***
+//  *****
+// *******
+//  *****
+//   ***
+//    *
+//
+// The diamond should have as many lines as lineCount is
+
+
+let lineCount3: number = 7;
+
+let star3: string="";
+
+for (let i = 0; i < lineCount3; i++) {
+
+
+    let spaceLength: number =lineCount3-i;
+    let spacePrefix: string="";
+    while(spaceLength>0){
+        spacePrefix += " ";
+        spaceLength--;
+    }
+
+
+    if (i==0){
+        star3+="*";
+    }else{
+        star3+="**";
+    }
+    console.log(spacePrefix+ star3);
+
+}
+let spaceS: string= "";
+
+
+
+for (let i = 0; i < lineCount3; i++) {
+
+    let starLength: number = lineCount3-i;
+    let starPrefix: string="*";
+    while (starLength>1) {
+        starPrefix+="**";
+        starLength--;
+    }
+    spaceS += " ";
+
+    console.log(spaceS + starPrefix);
 
 
 }

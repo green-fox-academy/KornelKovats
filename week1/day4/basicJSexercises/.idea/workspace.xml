@@ -20,11 +20,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exercise.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exercise.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercise.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="409" column="5" lean-forward="true" selection-start-line="409" selection-start-column="5" selection-end-line="409" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="391" lean-forward="true" selection-start-line="391" selection-end-line="414" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyramid.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pyramid.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -36,6 +45,7 @@
       <list>
         <option value="$PROJECT_DIR$/exercises.js" />
         <option value="$PROJECT_DIR$/exercise.ts" />
+        <option value="$PROJECT_DIR$/pyramid.ts" />
       </list>
     </option>
   </component>
@@ -115,12 +125,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594892816276</updated>
-      <workItem from="1594892817522" duration="10151000" />
+      <workItem from="1594892817522" duration="12130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10151000" />
+    <option name="totallyTimeSpent" value="12130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -136,11 +146,11 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49917898" weight="0.32991454" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5303777" side_tool="true" visible="true" weight="0.32991454" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5303777" side_tool="true" visible="true" weight="0.22051282" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32991454" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.46962234" visible="true" weight="0.32991454" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.46962234" visible="true" weight="0.22051282" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958949" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -173,8 +183,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exercise.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="409" column="5" lean-forward="true" selection-start-line="409" selection-start-column="5" selection-end-line="409" selection-end-column="5" />
+        <state relative-caret-position="75">
+          <caret line="391" lean-forward="true" selection-start-line="391" selection-end-line="414" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyramid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
