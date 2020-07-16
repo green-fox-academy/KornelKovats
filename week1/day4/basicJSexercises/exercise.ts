@@ -338,5 +338,79 @@ for (let i = 0; i <= 7; i++) {
 
     howmany=i;
 }
-console.log("the sum is: " + sum + " the average is: " + sum/howmany);
+console.log(`the sum is:   ${sum}   the average is:  ${sum/howmany}`);
+
+// Write a program that prints the numbers from 1 to 100.
+// But for multiples of three print “Fizz” instead of the number
+// and for the multiples of five print “Buzz”.
+// For numbers which are multiples of both three and five print “FizzBuzz”.
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 3 == 0) {
+        console.log("Fizz");
+    } else if (i % 5 == 0) {
+        console.log("Buzz");
+    }
+    else if (i % 5 ==0 && i%3==0) {
+        console.log("FizzBuzz");
+    }
+}
+
+// Write a program that draws a triangle like this:
+//
+// *
+// **
+// ***
+// ****
+//
+// The triangle should have as many lines as lineCount is
+
+
+let lineCount: number = 4;
+let star: string="";
+
+for (let i = 0; i < lineCount; i++) {
+    star +="*";
+    console.log(star);
+}
+console.log();
+console.log();
+console.log();
+console.log();
+console.log();
+console.log();
+// Write a program that draws a
+// pyramid like this:
+//
+//    *
+//   ***
+//  *****
+// *******
+//
+// The pyramid should have as many lines as lineCount is
+
+
+let lineCount1: number = 2;
+
+let star2: string="";
+
+for (let i = 0; i < lineCount1; i++) {
+
+
+    let spaceLength: number =lineCount1-i;
+    let spacePrefix: string="";
+    while(spaceLength>0){
+        spacePrefix += " ";
+        spaceLength--;
+    }
+    star2 +="*";
+
+    if (i>0){
+        star2+="*";
+    }
+    console.log(spacePrefix+ star2);
+
+
+
+}
 
