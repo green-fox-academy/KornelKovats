@@ -15,4 +15,4 @@ console.log(true);
 
 let favNumber: number = 14;
 
-console.log("my favourite number is " + favNumber);
+console.log("my favourite number is" + favNumber);
