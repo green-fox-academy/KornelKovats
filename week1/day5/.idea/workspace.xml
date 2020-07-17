@@ -35,8 +35,8 @@
       <file leaf-file-name="matrix.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matrix.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="196">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -44,11 +44,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reverse.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reverse.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reverse.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="265">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doubling.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doubling.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greet.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/greet.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -84,7 +108,9 @@
         <option value="$PROJECT_DIR$/colors.ts" />
         <option value="$PROJECT_DIR$/sum.ts" />
         <option value="$PROJECT_DIR$/matrix.ts" />
+        <option value="$PROJECT_DIR$/doubling.ts" />
         <option value="$PROJECT_DIR$/reverse.ts" />
+        <option value="$PROJECT_DIR$/greet.ts" />
       </list>
     </option>
   </component>
@@ -156,12 +182,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594970686675</updated>
-      <workItem from="1594970691583" duration="16895000" />
+      <workItem from="1594970691583" duration="18644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16895000" />
+    <option name="totallyTimeSpent" value="18644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -177,11 +203,11 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4995958" weight="0.32991454" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.118027486" side_tool="true" visible="true" weight="0.46837607" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.118027486" side_tool="true" visible="true" weight="0.34358975" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.8819725" visible="true" weight="0.46837607" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.8819725" visible="true" weight="0.34358975" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19401778" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -326,20 +352,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matrix.ts">
+    <entry file="file://$PROJECT_DIR$/reverse.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state relative-caret-position="265">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reverse.ts">
+    <entry file="file://$PROJECT_DIR$/doubling.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matrix.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/greet.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

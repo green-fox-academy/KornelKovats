@@ -8,7 +8,7 @@
 
 let numbers:number[]= [3, 4, 5, 6, 7];
 
-numbers.reverse();
+//numbers.reverse();
 
 
 
@@ -16,5 +16,5 @@ let newNumbers: number[] = numbers.map(function (value, index, array) {
     return value;
 
 });
-
+newNumbers.reverse();
 console.log(newNumbers);
