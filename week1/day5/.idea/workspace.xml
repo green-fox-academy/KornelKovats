@@ -11,77 +11,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="basicFunction.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicFunction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print-elements.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/print-elements.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="change-elements.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/change-elements.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="increment-elements.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/increment-elements.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="append-a.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/append-a.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="double-items.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/double-items.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="colors.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/colors.ts">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sum.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sum.ts">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matrix.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/matrix.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,8 +68,10 @@
         <option value="$PROJECT_DIR$/increment-elements.ts" />
         <option value="$PROJECT_DIR$/append-a.ts" />
         <option value="$PROJECT_DIR$/double-items.ts" />
-        <option value="$PROJECT_DIR$/colors.ts" />
         <option value="$PROJECT_DIR$/change-elements.ts" />
+        <option value="$PROJECT_DIR$/colors.ts" />
+        <option value="$PROJECT_DIR$/sum.ts" />
+        <option value="$PROJECT_DIR$/matrix.ts" />
       </list>
     </option>
   </component>
@@ -183,31 +143,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594970686675</updated>
-      <workItem from="1594970691583" duration="11831000" />
+      <workItem from="1594970691583" duration="16012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11831000" />
+    <option name="totallyTimeSpent" value="16012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1279" height="705" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.117219076" side_tool="true" visible="true" weight="0.3948718" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4995958" weight="0.32991454" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.118027486" side_tool="true" visible="true" weight="0.46837607" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.8827809" visible="true" weight="0.3948718" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.8819725" visible="true" weight="0.46837607" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19401778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19401778" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,8 +289,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/colors.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sum.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matrix.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

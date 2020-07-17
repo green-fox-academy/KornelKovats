@@ -11,3 +11,4 @@ numbers.forEach(function (value, index, array) {
 });
 
 console.log(sum);
+
