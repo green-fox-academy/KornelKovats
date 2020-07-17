@@ -4,3 +4,13 @@
 //   a loop
 // - It should print: ['GinGin', 'WhiskeyWhiskey', 'WineWine', 'BeerBeer']`
 
+
+
+let drinks: string[]= ['Gin', 'Whiskey', 'Wine', 'Beer'];
+
+drinks.forEach(function (value, index, array) {
+    array[index] = value + value;
+
+});
+
+console.log(drinks);

@@ -6,9 +6,9 @@
 
 let numbers: number[]= [1, 2, 3, 8, 5, 6];
 
-function change(array){
+numbers[3]= 4;
 
-}
+
 let numbersNew = numbers.map(function (value, index, array) {
     if (value===8){
         return 4;
