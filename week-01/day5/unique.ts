@@ -8,8 +8,10 @@ function unique(arr) {
 
 
         let isThere: boolean = false;
-        for (let j = 0; j < newArr.length; j++) {
-            if (newArr[j]==arr[i]){
+        for (let j = 0; j < newArr.length; j++)
+        {
+            if (newArr[j]==arr[i])
+            {
                 isThere= true;
             }
         }
