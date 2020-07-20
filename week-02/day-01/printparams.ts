@@ -8,5 +8,5 @@ function printParams() {
     }
 }
 
-console.log(printParams();
+console.log(printParams());
 

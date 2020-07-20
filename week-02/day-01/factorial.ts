@@ -10,4 +10,6 @@ function factorio(number: number){
     
 }
 
-factorio(8);
+//factorio(8);
+
+console.log(Math.round(7/2));
