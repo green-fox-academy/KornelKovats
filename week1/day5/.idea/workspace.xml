@@ -28,18 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="increment-elements2.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../week-01/day5/increment-elements2.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="apppend-a2.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../week-01/day5/apppend-a2.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/../../week-01/day5/double-items2.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -68,16 +56,16 @@
         <entry file="file://$PROJECT_DIR$/../../week-01/day5/sum-all2.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="diagonal-matrix2.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../week-01/day5/diagonal-matrix2.ts">
+      <file leaf-file-name="printparams.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-01/printparams.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="150">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -85,23 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reverse2.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../week-01/day5/reverse2.ts">
+      <file leaf-file-name="pyramid.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-01/day4/basicJSexercises/pyramid.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="200">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unique.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../week-01/day5/unique.ts">
+      <file leaf-file-name="factorial.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-01/factorial.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="75">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -157,6 +142,12 @@
         <option value="$PROJECT_DIR$/../../week-01/day5/diagonal-matrix2.ts" />
         <option value="$PROJECT_DIR$/../../week-01/day5/reverse2.ts" />
         <option value="$PROJECT_DIR$/../../week-01/day5/unique.ts" />
+        <option value="$PROJECT_DIR$/../../week-01/day5/bubble.ts" />
+        <option value="$PROJECT_DIR$/../../week-01/day5/printparams.ts" />
+        <option value="$PROJECT_DIR$/../../week-01/day5/tsconfig.json" />
+        <option value="$PROJECT_DIR$/../../week-01/day5/subnit.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-01/factorial.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-01/printparams.ts" />
       </list>
     </option>
   </component>
@@ -192,7 +183,11 @@
           <expand>
             <path>
               <item name="day5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day5" type="462c0819:PsiDirectoryNode" />
+              <item name="basicJSexercises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="day5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="day-01" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,10 +196,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/kornelkovats/greenfox/KornelKovats/week-01/day5/subnit.ts" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,12 +226,12 @@
       <option name="presentableId" value="Default" />
       <updated>1594970686675</updated>
       <workItem from="1594970691583" duration="26332000" />
-      <workItem from="1595187809173" duration="3847000" />
+      <workItem from="1595187809173" duration="11295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30179000" />
+    <option name="totallyTimeSpent" value="37627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,6 +244,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1279" height="705" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4995958" weight="0.32991454" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.118027486" side_tool="true" weight="0.34358975" />
@@ -535,7 +533,7 @@
     <entry file="file://$PROJECT_DIR$/../../week-01/day5/double-items2.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -545,14 +543,48 @@
     <entry file="file://$PROJECT_DIR$/../../week-01/day5/sum-all2.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../week-01/day5/diagonal-matrix2.ts">
+    <entry file="file://$PROJECT_DIR$/../../week-01/day5/bubble.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="116">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-01/day5/unique.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-01/day5/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-01/day5/subnit.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-01/day5/printparams.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -569,10 +601,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../week-01/day5/unique.ts">
+    <entry file="file://$PROJECT_DIR$/../../week-01/day5/diagonal-matrix2.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="480">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-01/printparams.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-01/day4/basicJSexercises/pyramid.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-01/factorial.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
