@@ -38,3 +38,7 @@ for (let i = 0; i < lineCount; i++) {
     space= "";
 
 }
+
+let string: string = "amsdjoaisd";
+
+console.log(string[1]);
