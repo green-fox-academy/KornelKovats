@@ -6,6 +6,7 @@ function diagonalDifference(arr) {
     let helper = 0;
     for (let i = 0; i < length; i++) {
         let reversed = arr[i].slice().reverse();
+        console.log(arr[i].slice());
         //arr[i] = [];
         //console.log(reversed);
         for (let j = 0; j < length; j++) {
