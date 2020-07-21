@@ -31,11 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="simple-replace.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/simple-replace.ts">
+      <file leaf-file-name="sets.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-02/material-review/sets.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="210">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-introduction-1.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/list-introduction-1.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -53,13 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/third.ts" />
-        <option value="$PROJECT_DIR$/compare-length.ts" />
-        <option value="$PROJECT_DIR$/sum/elements.ts" />
-        <option value="$PROJECT_DIR$/sum-elements.ts" />
-        <option value="$PROJECT_DIR$/swap-elements.ts" />
-        <option value="$PROJECT_DIR$/print-elements.ts" />
-        <option value="$PROJECT_DIR$/basicFunction.js" />
         <option value="$PROJECT_DIR$/increment-elements.ts" />
         <option value="$PROJECT_DIR$/append-a.ts" />
         <option value="$PROJECT_DIR$/double-items.ts" />
@@ -104,6 +106,13 @@
         <option value="$PROJECT_DIR$/../../week-02/day-01/printparams.ts" />
         <option value="$PROJECT_DIR$/../../week-02/day-02/material-review/sets.ts" />
         <option value="$PROJECT_DIR$/../../week-02/day-02/Strings/simple-replace.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Strings/reverse.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Strings/url-fixer.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Strings/takes-longer.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Strings/todo-print.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Strings/he-will-never.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Data Sctructure/list-introduction-1.ts" />
+        <option value="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/list-introduction-1.ts" />
       </list>
     </option>
   </component>
@@ -148,7 +157,7 @@
             <path>
               <item name="day5" type="b2602c69:ProjectViewProjectNode" />
               <item name="day-02" type="462c0819:PsiDirectoryNode" />
-              <item name="Strings" type="462c0819:PsiDirectoryNode" />
+              <item name="Data_Sctructure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,12 +197,12 @@
       <option name="presentableId" value="Default" />
       <updated>1594970686675</updated>
       <workItem from="1594970691583" duration="26332000" />
-      <workItem from="1595187809173" duration="22117000" />
+      <workItem from="1595187809173" duration="24168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48449000" />
+    <option name="totallyTimeSpent" value="50500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,6 +215,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1279" height="705" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4995958" weight="0.32991454" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.118027486" side_tool="true" weight="0.34358975" />
@@ -214,11 +224,11 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.8819725" visible="true" weight="0.2905983" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48915663" visible="true" weight="0.19725141" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48915663" visible="true" weight="0.18189168" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32983023" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info id="Structure" order="1" sideWeight="0.5108434" side_tool="true" visible="true" weight="0.19725141" />
+      <window_info id="Structure" order="1" sideWeight="0.5108434" side_tool="true" visible="true" weight="0.18189168" />
       <window_info id="Favorites" order="2" sideWeight="0.5048309" side_tool="true" weight="0.19725141" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -258,58 +268,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/append-a.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/colors.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sum.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summm.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matrix.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reverse.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doubling.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/greet.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -635,17 +593,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/material-review/sets.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/simple-replace.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/reverse.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/url-fixer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/takes-longer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/todo-print.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Data Sctructure/list-introduction-1.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Strings/he-will-never.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/material-review/sets.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/list-introduction-1.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
