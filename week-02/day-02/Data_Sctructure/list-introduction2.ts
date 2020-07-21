@@ -1,0 +1,1 @@
+let string: string[]= ['Apple', 'Avocado', 'Blueberries', 'Durian', 'Lychee'];
