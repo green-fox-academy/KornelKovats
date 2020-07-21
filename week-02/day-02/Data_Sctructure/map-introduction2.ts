@@ -23,4 +23,28 @@ Object.entries(objektum2).forEach(function (value) {
     }
 });
 
-console.log(objektum2);
+//console.log(objektum2);
+
+let newElement: string[]= ['978-1-60309-450-4', '978-1-60309-453-5'];
+
+objektum2['978-1-60309-450-4'] = 'They Called Us Enemy';
+objektum2['978-1-60309-453-5'] = 'Why Did We Trust Him?';
+
+let associated: boolean = false;
+Object.entries(objektum2).forEach(function (value) {
+    if (value[0]=='478-0-61159-424-8'&&value[1]!=undefined){
+    associated=true;
+    }
+});
+if (associated) {
+    console.log("associated");
+}else   {
+    console.log("not associated");
+}
+Object.entries(objektum2).forEach(function (value) {
+    if (value[0]=="978-1-60309-453-5"){
+        console.log(value[1]);
+    }
+});
+
+//console.log(objektum2);
