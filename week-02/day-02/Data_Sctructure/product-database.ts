@@ -12,7 +12,7 @@ Chicken :550,
 
 console.log("The fish is : " + database.Fish );
 let mostexpensiveValue = Object.values(database)[0];
-let mostexpensiveProduct = Object.keys(database)[0]
+let mostexpensiveProduct = Object.keys(database)[0];
 
 
 
