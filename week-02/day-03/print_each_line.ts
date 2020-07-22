@@ -8,5 +8,13 @@ declare var require: any
 
 const fs = require('fs');
 
-let asd: string[] = fs.readFileSync('asd.txt', 'utf8');
-console.log(asd);
+
+try {
+    let file: string[] = fs.readFileSync('my-file.txt', 'utf8');
+}catch (e) {
+    console.log('Unable to read file: my-file.txt');
+}
+
+
+
+
