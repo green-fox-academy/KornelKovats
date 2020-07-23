@@ -13,11 +13,11 @@ export {};
 
 
 function squareSize(){
-    return Math.floor(Math.random() * 5)|5;
+    return Math.floor(Math.random() * 5|5);
 }
 
 function makebigger(size:number){
-    return size *1.2;
+    return size *1.005;
 }
 
 
