@@ -14,7 +14,7 @@ const ctx = canvas.getContext('2d');
 
 function drawer (x:number,y:number) {
     // Draw a colored line
-    ctx.strokeStyle = 'pink';
+
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x+(canvas.width-x), y);
