@@ -8,7 +8,6 @@ let objektum2: any = {
     978-1-60309-459-7: "Lupus",
     978-1-60309-444-3: "Red Panda and Moon Bear",
     978-1-60309-461-0: "The Lab"
-
 }
 let objektum2: any = {
     '978-1-60309-452-8': "A Letter to Jo",
@@ -117,10 +116,10 @@ console.log(lines);
 //two dimensional matrix push with elements
 
 
-let array1:number[][] = [];
+let array1 = [];
 
 for (let i = 0; i < 10; i++) {
-    //array1[i] = []; //THIS
+    array1[i] = []; //THIS
     for (let j = 0; j < 10; j++) {
         array1[i].push(j);
     }
