@@ -23,6 +23,34 @@ for (let i = 0; i < squaresize; i+=20) {
     ctx.strokeStyle = 'blue';
     ctx.moveTo(squaresize, i);
     ctx.lineTo(squaresize-i,squaresize );
+    ctx.stroke();
+}
 
+for (let i = squaresize; i <= size; i+=20) {
+    ctx.beginPath();
+    ctx.strokeStyle = 'blue';
+
+    ctx.moveTo(i-squaresize,squaresize);
+    //ctx.moveTo(size-i,size-squaresize );
+    ctx.lineTo(squaresize, i)
+    ctx.stroke();
+}
+
+for (let i = squaresize; i < size; i+=20) {
+    ctx.beginPath();
+    ctx.strokeStyle = 'blue';
+
+    ctx.moveTo(squaresize,i-squaresize);
+    //ctx.moveTo(size-i,size-squaresize );
+    ctx.lineTo(i, squaresize)
+    ctx.stroke();
+}
+for (let i = squaresize; i < size; i+=20) {
+    ctx.beginPath();
+    ctx.strokeStyle = 'blue';
+
+    ctx.moveTo(squaresize,i);
+    //ctx.moveTo(size-i,size-squaresize );
+    ctx.lineTo(size-i+squaresize, squaresize)
     ctx.stroke();
 }
