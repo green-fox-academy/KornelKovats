@@ -1,7 +1,3 @@
-import { Thing } from './thing';
-import { Fleet } from './fleet';
-
-let fleet = new Fleet();
 
 // -  You have the `Thing` class
 // -  You have the `Fleet` class
@@ -17,3 +13,39 @@ let fleet = new Fleet();
 // 4. [x] Eat lunch
 
 // Hint: You have to create a `print()` method as well
+
+import { Thing } from './thing';
+import { Fleet } from './fleet';
+
+class FleetOfThings{
+    //fleet = [];
+    main():Thing[]{
+        let fleet = new Fleet();
+
+        let getMilk = new Thing('Get milk');
+        let removeObstacles = new Thing('Remove Obstacles');
+        let standUp = new Thing('Stand up');
+        let eatLunch = new Thing('Eat Lunch');
+        standUp.complete();
+        eatLunch.complete();
+        fleet.add(getMilk);
+        fleet.add(removeObstacles);
+        fleet.add(standUp);
+        fleet.add(eatLunch);
+
+        return fleet.getThings();
+
+    }
+    print(things: Thing[]){
+        things.forEach(function (value, index, array) {
+            if (value.getCompleted() == undefined){
+                console.log('[ ]' + value.getName());
+            }
+            if (value.getCompleted()== true) {
+                console.log('[X]' + value.getName());
+            }
+        });
+    }
+}
+let fleet = new FleetOfThings();
+fleet.print(fleet.main());
