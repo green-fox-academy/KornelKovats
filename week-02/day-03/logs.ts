@@ -4,7 +4,7 @@
 // Write a function that returns the GET / POST request ratio.
 
 
-declare var require: any
+
 const fs = require('fs');
 
 let lines = fs.readFileSync('log.txt','utf-8').split('\n').map(function (value:string,index:number,arr:string[]) {
