@@ -235,3 +235,4 @@ fabric.properties
 .idea/$CACHE_FILE$
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,phpstorm,node
+.idea

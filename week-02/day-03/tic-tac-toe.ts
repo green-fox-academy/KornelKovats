@@ -24,7 +24,7 @@ function ticTacResult(filename:string){
 
     matrix.forEach(function (row,index,arr) {
                 //console.log(arr[index]);
-                        row.forEach(function (cell,index) {
+                        row.forEach(function (cell) {
                         if (cell =='O'){
                             rowhelperO+='O';
                         } else if (cell =='X'){
@@ -57,11 +57,6 @@ function ticTacResult(filename:string){
     }else if (diagonalhelperX=='XXX') {
         whowon='X';
     }
-
-
-
-
-
 
 
 

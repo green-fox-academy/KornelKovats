@@ -25,3 +25,5 @@ let multiple = (path: string, word: string,number: number)=>{
 
 };
 multiple('appending.txt','alma',5);
+
+

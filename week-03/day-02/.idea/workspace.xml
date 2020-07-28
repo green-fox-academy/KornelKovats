@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0caf3718-0785-44f0-945c-fb0c32cdca3a" name="Default" comment="" />
+    <list default="true" id="0caf3718-0785-44f0-945c-fb0c32cdca3a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/.idea/Data_Sctructure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/.idea/Data_Sctructure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-02/Data_Sctructure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-03/copy-file.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-03/copy-file.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-03/doubled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-03/doubled.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-03/write-single-line.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-03/write-single-line.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-05/.idea/day-05.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-05/.idea/day-05.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-05/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-05/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-05/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-05/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-05/demo/demo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-05/demo/demo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-01/BlogPost/BlogPost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../day-01/BlogPost/BlogPost.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/day-02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/day-02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,20 +27,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="farm.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Farm/farm.ts">
+      <file leaf-file-name="birth.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/birth.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="copy-file.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/copy-file.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-113">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="240">
+              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animal.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../day-01/Animal/animal.ts">
+      <file leaf-file-name="doubled.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/doubled.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="divided_by_zero.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/divided_by_zero.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="-32">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logs.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/logs.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-29">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="print_each_line.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/print_each_line.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reversed-order.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/reversed-order.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="tic-tac-toe.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../week-02/day-03/tic-tac-toe.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-110">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,6 +99,9 @@
         <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -51,6 +116,11 @@
         <option value="$PROJECT_DIR$/animal/animal.ts" />
         <option value="$PROJECT_DIR$/../day-01/Animal/animal.ts" />
         <option value="$PROJECT_DIR$/Farm/farm.ts" />
+        <option value="$PROJECT_DIR$/../day-01/BlogPost/BlogPost.ts" />
+        <option value="$PROJECT_DIR$/blog/blog.ts" />
+        <option value="$PROJECT_DIR$/../../.eslintrc.js" />
+        <option value="$PROJECT_DIR$/../../package.json" />
+        <option value="$PROJECT_DIR$/../../.gitignore" />
       </list>
     </option>
   </component>
@@ -66,8 +136,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/../../node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/../../package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
@@ -75,6 +150,7 @@
     <option name="width" value="1279" />
     <option name="height" value="705" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -86,21 +162,18 @@
           <expand>
             <path>
               <item name="day-02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-02" type="462c0819:PsiDirectoryNode" />
+              <item name="KornelKovats" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="day-02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-02" type="462c0819:PsiDirectoryNode" />
-              <item name="Farm" type="462c0819:PsiDirectoryNode" />
+              <item name="KornelKovats" type="462c0819:PsiDirectoryNode" />
+              <item name="week-02" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="day-02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day-02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day-01" type="462c0819:PsiDirectoryNode" />
-              <item name="Animal" type="462c0819:PsiDirectoryNode" />
+              <item name="KornelKovats" type="462c0819:PsiDirectoryNode" />
+              <item name="week-02" type="462c0819:PsiDirectoryNode" />
+              <item name="day-03" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -111,9 +184,17 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/../../node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/../../node_modules/eslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -137,25 +218,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595919510436</updated>
-      <workItem from="1595919511825" duration="11828000" />
+      <workItem from="1595919511825" duration="13155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11828000" />
+    <option name="totallyTimeSpent" value="13155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1279" height="705" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.117219076" side_tool="true" weight="0.32991454" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.8827809" visible="true" weight="0.46666667" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.8827809" visible="true" weight="0.082051285" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16006467" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18835893" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -266,14 +346,100 @@
     <entry file="file://$PROJECT_DIR$/../day-01/Animal/animal.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../day-01/BlogPost/BlogPost.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../kornelkovats.github.io">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="237" column="5" selection-start-line="237" selection-start-column="5" selection-end-line="237" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/blog.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Farm/farm.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-113">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/birth.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/copy-file.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/doubled.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/divided_by_zero.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/logs.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/print_each_line.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/reversed-order.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../week-02/day-03/tic-tac-toe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

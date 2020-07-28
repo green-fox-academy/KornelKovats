@@ -62,4 +62,6 @@ class BlogPost3 {
 
 let blogPost3 = new BlogPost3('John Doe','Lorem Ipsum','Lorem ipsum dolor sit amet.',new Date);
 
+
+export{BlogPost}
 console.log(blogPost3);

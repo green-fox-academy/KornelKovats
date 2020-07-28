@@ -15,5 +15,5 @@ let manipulate = (myName: string)=>{
     }catch (e) {
         console.log("Unable to write file: my-file.txt");
     }
-}
+};
 manipulate("Kornel");

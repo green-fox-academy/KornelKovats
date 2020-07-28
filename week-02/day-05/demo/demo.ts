@@ -116,10 +116,10 @@ console.log(lines);
 //two dimensional matrix push with elements
 
 
-let array1 = [];
+let array1: = [];
 
 for (let i = 0; i < 10; i++) {
-    array1[i] = []; //THIS
+    array1[i] = []; //THIS is iportant
     for (let j = 0; j < 10; j++) {
         array1[i].push(j);
     }

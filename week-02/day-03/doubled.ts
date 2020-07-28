@@ -23,22 +23,38 @@ function decrypt(filename:string) {
 //------------------functional programming  method to solve the case with map
 
 
-let reading = fs.readFileSync('duplicated-chars.txt','utf-8').split('').map(function (value:string,index:number) {
-if (index%2==0){
-    return value;
-}
+// let reading = fs.readFileSync('duplicated-chars.txt','utf-8').split('').map(function (value:string,index:number) {
+
+//}).join('');
+
+let reading = fs.readFileSync('duplicated-chars.txt','utf-8').split('').filter(function (value:string,index:number) {
+     if (index%2==1|| value=='\n')
+     {
+        return value;
+     }
 }).join('');
 
+console.log(reading);
+
+
 //console.log(reading);
+
+// let reading2 = fs.readFileSync('duplicated-chars.txt','utf-8').split('').map(function (value:string,index:number) {
+//     if (index%2==0){
+//         return value;
+//     }
+//
+// });
+//
+// console.log(reading2);
 
 
 //------------------functional programming  method to solve the case with filter
 
 
 let readingFilter = fs.readFileSync('duplicated-chars.txt','utf-8').split('').filter(function (value:string,index:number) {
-    if (index%2==0){
+    if (index%2==1){
         return value;
     }
 }).join('');
 
-console.log(reading);
