@@ -22,3 +22,4 @@ let animal = new Animal();
 
 console.log(animal);
 
+export {Animal}

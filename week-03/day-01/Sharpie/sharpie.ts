@@ -9,4 +9,12 @@ class Sharpie {
     use(){
         this.inkAmount = this.inkAmount - 1;
     }
+    getColor(color:string):string{
+        return this.color;
+    }
+    getWidth(width: number):number{
+        return this.width;
+    }
 }
+
+export {Sharpie}
