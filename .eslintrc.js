@@ -11,7 +11,17 @@ module.exports = {
         },
     },
     rules: {
-        'import/no-extraneous-dependencies': [2, { devDependencies: ['**/test.ts'] }],
+        'import/no-extraneous-dependencies': [2, {devDependencies: ['**/test.ts']}],
         '@typescript-eslint/indent': [2, 2],
+        'import/extensions': [
+            'error',
+            'ignorePackages',
+            {
+                js: 'never',
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never',
+            },
+        ],
     },
 };

@@ -1,3 +1,5 @@
+'use strict'
+
 import {Animal} from '../../day-01/Animal/animal'
 
 class Farm {
