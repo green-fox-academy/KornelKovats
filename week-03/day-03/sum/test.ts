@@ -3,5 +3,11 @@ import {Sum} from './sum'
 
 let sum = new Sum();
 
-let newInteger: number[] = [3,5,7,34,7,8,23,4,5,7];
+let newInteger: number[] = [];
+
+test('equaling sum',t=>{
+    t.equals(sum.summingElements(),0);
+
+    t.end();
+});
 

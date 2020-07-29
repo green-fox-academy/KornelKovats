@@ -1,9 +1,10 @@
 class Sum {
 
-    summingElements(list: number[]):number{
-        let sum = list.reduce(function (value) {
-                return sum + value;
-        });
+    summingElements(list: number[]=[0]):number{
+
+        let sum = list.reduce(function (accumulator, currentValue) {
+                return accumulator + currentValue;
+        },0);
         return sum;
     }
 }

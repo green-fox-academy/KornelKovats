@@ -8,7 +8,7 @@ class Fibonacci {
                 array.push(array[i-1]+array[i-2]);
             }
         }
-        if (index==0){
+        if (index==0||index<0){
             return 0
         } else {
             return array[index-1];
