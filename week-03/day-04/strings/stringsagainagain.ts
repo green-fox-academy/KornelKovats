@@ -7,5 +7,3 @@ function strings(string: string) {
   }
   return '*' + string.slice(0,1) + strings(string.slice(1, string.length));
 }
-
-console.log(strings('asdasd'));
