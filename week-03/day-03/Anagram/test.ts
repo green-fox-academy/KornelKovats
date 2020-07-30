@@ -1,11 +1,10 @@
-import {Anagramma} from "./anagram";
-let test = require('tape');
+import { Anagramma } from './anagram';
 
-let anagram = new Anagramma();
+const test = require('tape');
 
+const anagram = new Anagramma();
 
-test('Is Anagramma: ',t=>{
-    t.equals(anagram.isAnagramma('asd','dsa'),true);
-    t.end();
+test('Is Anagramma: ', (t) => {
+  t.equals(anagram.isAnagramma('asd', 'dsa'), true);
+  t.end();
 });
-

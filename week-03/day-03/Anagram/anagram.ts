@@ -1,12 +1,11 @@
 class Anagramma {
-    isAnagramma(firstWord:string,secondWord:string):boolean{
-        let reversedSecondWordr = secondWord.split('').reverse().join('');
-        if (firstWord==reversedSecondWordr) {
-            return true;
-        }else {
-            return false;
-        }
-
+  // eslint-disable-next-line class-methods-use-this
+  isAnagramma(firstWord:string, secondWord:string):boolean {
+    const reversedSecondWordr = secondWord.split('').reverse().join('');
+    if (firstWord == reversedSecondWordr) {
+      return true;
     }
+    return false;
+  }
 }
-export {Anagramma}
+export { Anagramma };
