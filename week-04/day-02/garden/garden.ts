@@ -26,9 +26,9 @@ class Garden {
     });
     this.plants.forEach((plant) => {
       if (plant.needsWatering()) {
-        console.log(`The ${plant.getColor()} ${plant.getName} needs watering`);
+        console.log(`The ${plant.getColor()} ${plant.getName()} needs watering`);
       } else {
-        console.log(`The ${plant.getColor()} ${plant.getName} doesnt need watering`);
+        console.log(`The ${plant.getColor()} ${plant.getName()} doesnt need watering`);
       }
     });
   }
@@ -36,9 +36,9 @@ class Garden {
   public whoNeedsWatering() {
     this.plants.forEach((plant) => {
       if (plant.needsWatering()) {
-        console.log(`The ${plant.getColor()} ${plant.getName} needs watering`);
+        console.log(`The ${plant.getColor()} ${plant.getName()} needs watering`);
       } else {
-        console.log(`The ${plant.getColor()} ${plant.getName} doesnt need watering`);
+        console.log(`The ${plant.getColor()} ${plant.getName()} doesnt need watering`);
       }
     });
   }
