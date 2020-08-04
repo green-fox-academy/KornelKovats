@@ -1,7 +1,7 @@
 class Aircraft {
-  private maxAmmo: number;
+  protected maxAmmo: number;
 
-  private amountAmmo: number;
+  protected amountAmmo: number;
 
   private baseDamage: number;
 
@@ -14,26 +14,37 @@ class Aircraft {
     this.amountAmmo = amountAmmo;
   }
 
-  public fight(): number {
-    return this.baseDamage * this.maxAmmo;
+  public getMaxAmmo() {
+    return this.maxAmmo;
   }
 
-  public refill(refillAmount: number) {
-    const remainingAmmo = this.maxAmmo + this.amountAmmo;
+  public getAmountAmmo() {
+    return this.amountAmmo;
+  }
+
+  public fight(): number {
+    return this.baseDamage * this.amountAmmo;
+  }
+
+  public refill(refillAmount: number):number {
+    const remainingAmmo = this.maxAmmo - this.amountAmmo;
     if (refillAmount > remainingAmmo) {
       this.amountAmmo = this.maxAmmo;
-    } else {
-      this.amountAmmo += remainingAmmo;
+      return remainingAmmo;
     }
+    this.amountAmmo += refillAmount;
+    return refillAmount;
   }
 
   public getType():string {
     return this.type;
   }
+  public getBaseDamage():number {
+    return this.baseDamage;
+  }
 
   public getStatus() {
-    console.log(`Type ${this.type}, Ammo: ${this.amountAmmo}, 
-    Base Damage: ${this.baseDamage}, All Damage: ${this.fight()}`);
+    console.log(`Type ${this.type}, Ammo: ${this.amountAmmo}, Base Damage: ${this.baseDamage}, All Damage: ${this.fight()}`);
   }
 
   public isPriority() {
