@@ -11,11 +11,11 @@ class Person {
     this.gender = gender;
   }
 
-  private introduce():void {
+  public introduce():void {
     console.log(`Hi, I'm ${this.name}, a ${this.age} year old ${this.gender}.`);
   }
 
-  private getGoal():void{
+  public getGoal():void{
     console.log('My goal is: Live for the moment!');
   }
 }
