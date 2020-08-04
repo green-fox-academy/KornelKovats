@@ -3,11 +3,12 @@ import { Person } from './person';
 class Student extends Person {
   private previousOrganization: string;
 
-  private skippedDays = 0;
+  private skippedDays;
 
-  constructor(name:string, age:number, gender:string, previousOrganization: string) {
+  constructor(name:string, age:number, gender:string, previousOrganization: string='The School of Life',skippedDays: number = 0) {
     super(name, age, gender);
     this.previousOrganization = previousOrganization;
+    this.skippedDays = skippedDays;
   }
 
   private getGoal():void {
