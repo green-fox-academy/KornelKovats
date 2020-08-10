@@ -13,7 +13,7 @@ fillCircle(100, 100, 50);
 // x = c * cos(angle)
 // y = c * sin(angle)
 
-let magic = 137.455;
+let magic = 137.555;
 let magic = 137.4;
 let dots = 200;
 let c = 12;
