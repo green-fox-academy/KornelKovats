@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    display: flex;
+    width: 500px;
+    height: 100px;
+    background-color: cyan;
+}
+.main{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.leftBar{
+    height: 500px;
+    flex-grow: 1;
+    background-color: orange;
+}
+.mainContent{
+    display: flex;
+    height: 500px;
+    margin-left: 8px;
+    margin-right: 8px;
+    flex-grow: 2;
+    background-color: red;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.rightBar{
+    height: 500px;
+    flex-grow: 1;
+    background-color: purple;
+}
+.footer{
+    width: 500px;
+    height: 100px;
+    background-color: blue;
+}
+.blackBox{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: black;
+}
