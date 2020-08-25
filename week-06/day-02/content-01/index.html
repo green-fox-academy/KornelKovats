@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+  </head>
+  <body>
+    <p class="apple">apple</p>
+    <p class="balloon">banana</p>
+    <p class="cat">car</p>
+    <p class="animals">goat rabbit <strong>cat</strong> dog</p>
+
+    <script>
+    /*1)  Fill every paragraph with the last one's content.
+    2)  Do the same again, but you should keep the cat strong.
+    */
+        let everyParagraph = document.getElementsByTagName('p');
+        for (const key in everyParagraph) {
+            if(key>=1){
+                everyParagraph[key].innerText = everyParagraph[key].innerText + everyParagraph[key-1].innerText;
+            }
+        }
+        for (const key in everyParagraph) {
+            if(key>=1){
+                everyParagraph[key].innerHTML = everyParagraph[key].innerHTML + everyParagraph[key-1].innerHTML;
+            }
+        }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+  </head>
+  <body>
+    <ul style="">
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+    </ul>
+
+
+    <script>  
+    let array = ['apple', 'banana', 'cat', 'dog'];
+    let listOfPlaceholders = document.querySelectorAll('li');
+    let style = document.createElement('style');
+    for (let i = 0; i < 4; i++) {
+        listOfPlaceholders[i].innerHTML = array[i];
+        //somewhy this is not working
+        //listOfPlaceholders[i].setAttribute("class","limeGreen");
+        listOfPlaceholders[i].style.backgroundColor = 'limeGreen';
+    }
+
+    </script>
+  </body>
+</html>

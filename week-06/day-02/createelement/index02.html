@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: CreateElement</title>
+  </head>
+  <body>
+    <ul class="asteroids">
+      <li id="b325" class="asteroid">The King</li>
+      <li class="asteroid b326">The Conceited Man</li>
+    </ul>
+    <div class="container"></div>
+
+    <script>
+        const asteroidList = document.querySelector('ul.asteroids');
+        const newAsteroid = document.createElement('li');
+
+        newAsteroid.id = 'b555';
+        newAsteroid.textContent = 'The Green Fox';
+        asteroidList.appendChild(newAsteroid);
+
+
+
+    </script>
+  </body>
+</html>

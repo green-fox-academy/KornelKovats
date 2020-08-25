@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+.container{
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: darkmagenta;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.main{
+    width: 100%;
+    flex-grow: 1;
+    background-color: gold;
+}
+.sideBar{
+    width: 200px;
+    flex-grow: 1;
+    background-color: green;
+}
