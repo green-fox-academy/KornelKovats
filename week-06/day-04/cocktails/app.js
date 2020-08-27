@@ -4,6 +4,7 @@ const app = express();
 const PORT = 3000;
 
 app.set('view engine', 'ejs');
+app.use('/static', express.static('static'));
 
 const cocktailsList = [
   {
@@ -71,7 +72,7 @@ app.get('/', (req, res) => {
   if (req.query.alcohol === undefined) {
     res.render('home.ejs', allCocktailsObj);
   } else {
-    const isContainThatAlcoholList = allCocktailsObj.cocktails.map((value) => {
+    const isContainThatAlcoholList = allCocktailsObj.cocktails.filter((value) => {
       let isContainsHelper = false;
       value.contains.forEach((drink) => {
         if (drink === req.query.alcohol) {
@@ -84,8 +85,9 @@ app.get('/', (req, res) => {
     });
     const isContainThatAlcoholObject = {
       cocktails: isContainThatAlcoholList,
+      alcohols: alcoholList,
     };
-    res.render('home.ejs',isContainThatAlcoholObject);
+    res.render('home.ejs', isContainThatAlcoholObject);
   }
 });
 

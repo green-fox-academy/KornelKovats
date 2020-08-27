@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
     <title>Cocktails</title>
 </head>
 <body>
-    <h1>COCKTAILS</h1>
-    <div><% for(let i = 0; i < cocktails.length; i++){  %>
-       <ul>
-        <li><%= JSON.stringify(cocktails[i])%></li>
-       </ul>
-        <% } %>
-    </div>
+    <h1>Cocktails</h1>
+    <div class="container">
+        <div class="alcohol">
+            <a href="">all </a>
+            <% for(let i = 0; i < alcohols.length; i++){  %>
+            <a href=""><%=alcohols[i]%> </a>
+            <%}%>
+        </div>
+        <div class="head">
+            <div class="namelogo">Name</div>
+            <div class="pricelogo">Price</div>
+        </div>
+        <div class="cocktails">
+            <% for(let i = 0; i < cocktails.length; i++){  %>
+            <div class="drink"><%=cocktails[i].name%> <%=cocktails[i].price%> 
+            </div>
+            <div><% cocktails[i].contains.forEach((value)=>{%>
+                <%=value%>
+            <%})%>
+            </div>
+            <%}%>
+
+        </div>
+</div>
 </body>
 </html>

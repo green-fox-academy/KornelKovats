@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+h1{
+    width: 600px;
+}
+a{
+    margin: 5px;
+}
+.container{
+      height: 100%;
+      width: 600px;
+      display: flex;
+      flex-flow: column;
+      background-color: grey;
+}
+.head{
+    display: flex;
+    height: 50px;
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    font-size: x-large;
+    flex-flow: row;
+}
+.cocktails{
+    display: flex;
+    height: 100%;
+    background-color: #a8a8a8;
+    flex-flow: column;
+}
+
+.namelogo{
+    width: 500px;
+}
+.pricelogo{
+    width: 100%;
+}
+.alcohol{
+    display: flex;
+      flex-flow: row;
+      text-transform: uppercase;
+      height: 50px;
+      font-size: x-large;
+      justify-content: left;
+      align-items: center;
+}
