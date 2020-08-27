@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet"/>
+    <title>Weather</title>
+</head>
+<body>
+    <h1>Weather</h1>
+
+    <% for(let i = 0; i < cast.length; i++ ){%>
+     <div class="container">
+         <div class="city">
+            <div><%= cast[i].city%></div>
+            <div><%= cast[i].location%></div>
+         </div>
+         <div  class="temperature">
+                <div><%= cast[i].weather[0].temp%> °C</div>
+         </div>
+         <div class="picture">
+            <img src="static/<%=cast[i].weather[0].icon%>.png" alt="">
+         </div>
+
+    </div>
+    <%}%>
+</div>
+</body>
+</html>
