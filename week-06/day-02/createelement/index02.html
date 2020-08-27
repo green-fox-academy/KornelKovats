@@ -6,21 +6,48 @@
   </head>
   <body>
     <ul class="asteroids">
-      <li id="b325" class="asteroid">The King</li>
-      <li class="asteroid b326">The Conceited Man</li>
+      <li>The King</li>
     </ul>
-    <div class="container"></div>
-
     <script>
-        const asteroidList = document.querySelector('ul.asteroids');
-        const newAsteroid = document.createElement('li');
-
-        newAsteroid.id = 'b555';
-        newAsteroid.textContent = 'The Green Fox';
-        asteroidList.appendChild(newAsteroid);
-
-
-
+         const planetData = [
+        {
+          category: 'inhabited',
+          content: 'Foxes',
+          asteroid: true,
+        },
+        {
+          category: 'inhabited',
+          content: 'Whales and Rabbits',
+          asteroid: true,
+        },
+        {
+          category: 'uninhabited',
+          content: 'Baobabs and Roses',
+          asteroid: true,
+        },
+        {
+          category: 'inhabited',
+          content: 'Giant monsters',
+          asteroid: false,
+        },
+        {
+          category: 'inhabited',
+          content: 'Sheep',
+          asteroid: true,
+        },
+      ];
+        const asteroids = document.querySelector('.asteroids');
+        asteroids.removeChild(asteroids.children[0]);
+        
+        planetData.forEach((value)=>{
+            let newElement = document.createElement('li');
+            newElement.textContent = value.content;
+            newElement.classList.add(value.category);
+            if(value.asteroid===true){
+                asteroids.appendChild(newElement);
+            }
+        })
+       
     </script>
   </body>
 </html>
