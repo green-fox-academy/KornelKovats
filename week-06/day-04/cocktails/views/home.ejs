@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails</title>
+</head>
+<body>
+    <h1>COCKTAILS</h1>
+    <div><% for(let i = 0; i < cocktails.length; i++){  %>
+       <ul>
+        <li><%= JSON.stringify(cocktails[i])%></li>
+       </ul>
+        <% } %>
+    </div>
+</body>
+</html>
