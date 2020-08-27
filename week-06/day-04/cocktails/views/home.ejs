@@ -10,9 +10,9 @@
     <h1>Cocktails</h1>
     <div class="container">
         <div class="alcohol">
-            <a href="">all </a>
+            <a href="http://localhost:3000/">all </a>
             <% for(let i = 0; i < alcohols.length; i++){  %>
-            <a href=""><%=alcohols[i]%> </a>
+            <a href="http://localhost:3000/?alcohol=<%=alcohols[i]%>"><%=alcohols[i]%> </a>
             <%}%>
         </div>
         <div class="head">
