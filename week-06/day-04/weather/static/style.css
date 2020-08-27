@@ -4,9 +4,22 @@ body{
     flex-flow: column;
     align-items: center;
 }
+a{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    padding:  inherit;
+    margin: inherit;
+    border-style: inherit;
+    display: inherit;
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    justify-content: inherit;
+}
+
 .container{
-    padding:  2px;
-    margin: 3px;
+    padding:  1px;
+    margin: 2px;
     border-style: solid;
     display: flex;
     width: 500px;
