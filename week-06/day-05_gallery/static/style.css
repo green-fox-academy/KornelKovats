@@ -21,8 +21,12 @@ body{
     height: 450px;
     width: 100%;
 }
+img{
+    height: 100%;
+    width: 100%;
+}
 .picture{
-    width: 400px;
+
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -35,6 +39,7 @@ body{
     transform: rotate(180deg);
 }
 .pipe{
+    background-color: gray;
     display: flex;
     width: 50px;
     height: 100%;

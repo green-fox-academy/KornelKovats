@@ -10,13 +10,13 @@
     <div class="container">
         <div class="main">
             <div class="pipe">
-                <a href=""><img src="static/arrow.svg" alt=""></a>
+                <a href="http://localhost:3000/?imageIndex=<%=previousIndex%>"><img src="static/arrow.svg" alt=""></a>
             </div>
             <div class="picture">
-                <img src="static/" alt="">
+                <img src="<%=currentImageUrl%>" alt="">
             </div>
             <div class="pipe">
-                <a href=""><img src="static/arrow.svg" alt="" class="rotate180"></a>
+                <a href="http://localhost:3000/?imageIndex=<%=nextIndex%>"><img src="static/arrow.svg" alt="" class="rotate180"></a>
             </div>
         </div>
 
