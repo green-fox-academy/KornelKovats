@@ -1,43 +1,43 @@
-let firstBox = document.createElement('div');
-let secondBox = document.createElement('div');
-let thirdBox = document.createElement('div');
+const firstBox = document.createElement('div');
+const secondBox = document.createElement('div');
+const thirdBox = document.createElement('div');
 
-let body = document.querySelector('body');
+const body = document.querySelector('body');
 body.style.display = 'flex';
 body.style.flexFlow = 'row';
 body.appendChild(firstBox);
 body.appendChild(secondBox);
 body.appendChild(thirdBox);
-//style of the 3 boxes
-firstBox.style.border = "thick solid black";
+// style of the 3 boxes
+firstBox.style.border = 'thick solid black';
 firstBox.style.height = '100px';
 firstBox.style.width = '100px';
 
-secondBox.style.border = "thick solid black";
+secondBox.style.border = 'thick solid black';
 secondBox.style.height = '100px';
 secondBox.style.width = '100px';
 
-thirdBox.style.border = "thick solid black";
+thirdBox.style.border = 'thick solid black';
 thirdBox.style.height = '100px';
 thirdBox.style.width = '100px';
 
-//appending the first box with value
-let bread = document.createElement('div');
+// appending the first box with value
+const bread = document.createElement('div');
 bread.innerText = 'bread';
 bread.style.width = '100px';
 bread.style.height = '25px';
 
-let milk = document.createElement('div');
+const milk = document.createElement('div');
 milk.innerText = 'milk';
 milk.style.width = '100px';
 milk.style.height = '25px';
 
-let orange = document.createElement('div');
+const orange = document.createElement('div');
 orange.innerText = 'orange';
 orange.style.width = '100px';
 orange.style.height = '25px';
 
-let tomato = document.createElement('div');
+const tomato = document.createElement('div');
 tomato.innerText = 'tomato';
 tomato.style.width = '100px';
 tomato.style.height = '25px';
@@ -46,3 +46,45 @@ firstBox.appendChild(bread);
 firstBox.appendChild(milk);
 firstBox.appendChild(orange);
 firstBox.appendChild(tomato);
+
+// appending the second box with buttons
+const up = document.createElement('button');
+up.innerText = 'Up';
+up.style.width = '100%';
+up.style.height = '25px';
+
+const right = document.createElement('button');
+right.innerText = '>';
+right.style.width = '100%';
+right.style.height = '25px';
+
+const del = document.createElement('button');
+del.innerText = 'X';
+del.style.width = '100%';
+del.style.height = '25px';
+
+const down = document.createElement('button');
+down.innerText = 'Down';
+down.style.width = '100%';
+down.style.height = '25px';
+
+secondBox.appendChild(up);
+secondBox.appendChild(right);
+secondBox.appendChild(del);
+secondBox.appendChild(down);
+
+// making the functions for right elements
+right.onclick = function () {
+  thirdBox.appendChild(firstBox.children[0]);
+};
+// delete the first elemnt
+del.onclick = () => {
+  firstBox.removeChild(firstBox.children[0]);
+};
+// making the first element the last
+down.onclick = ()=>{
+    firstBox.appendChild(firstBox.children[0]);
+}
+// making the last element first
+
+

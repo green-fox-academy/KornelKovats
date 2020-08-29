@@ -29,7 +29,6 @@ app.get('/', (req, res) => {
   } else {
     nextIndex = imageIndex + 1;
   }
-
   data.currentImageUrl = `/static/${listOfPictures[imageIndex]}`;
   data.previousIndex = previousIndex.toString();
   data.nextIndex = nextIndex.toString();

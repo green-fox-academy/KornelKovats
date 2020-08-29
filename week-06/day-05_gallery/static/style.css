@@ -8,8 +8,8 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
     margin: 0px;
     padding: 0px;
     margin: auto;
@@ -47,6 +47,18 @@ img{
     align-items: center;
 }
 .pictureList{
-    height: 50px;
+    display: flex;
+    flex-flow: row;
+    height: 100%;
     width: 100%;
+}
+.miniPictures{
+    display: flex;
+    margin: 3px;
+    padding: 3px;
+    border: black;
+    border-width: thin;
+
+    max-width: 50%;
+    max-height: 50%;
 }

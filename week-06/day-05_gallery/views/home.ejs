@@ -20,7 +20,13 @@
             </div>
         </div>
 
-        <div class="pictureList">THIS IS picture list</div>
+        <div class="pictureList">
+            <%for(let i = 1 ; i < pictures.length; i++){%>
+                <div class="miniPictures">
+                    <img src="static/<%=pictures[i-1]%>" alt="">
+                </div>
+            <%}%>
+        </div>
     </div>
 
 </body>

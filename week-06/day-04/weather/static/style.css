@@ -5,8 +5,8 @@ body{
     align-items: center;
 }
 a{
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
+    color: inherit; 
+    text-decoration: inherit;
     padding:  inherit;
     margin: inherit;
     border-style: inherit;
@@ -16,7 +16,6 @@ a{
     background-color: inherit;
     justify-content: inherit;
 }
-
 .container{
     padding:  1px;
     margin: 2px;

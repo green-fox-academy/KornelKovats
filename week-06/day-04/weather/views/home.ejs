@@ -12,7 +12,6 @@
     <% for(let i = 0; i < cast.length; i++ ){%>
     <div class="container">
     <a href="http://localhost:3000/cities/<%=cast[i].city%>">
-
          <div class="city">
             <div><%= cast[i].city%></div>
             <div><%= cast[i].location%></div>
@@ -23,7 +22,6 @@
          <div class="picture">
             <img src="static/<%=cast[i].weather[0].icon%>.png" alt="">
          </div>
-
     </a>
     </div>
     <%}%>
