@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const bodyParser = require('body-parser');
-const { isLabeledStatement } = require('typescript');
+const { isLabeledStatement, walkUpBindingElementsAndPatterns } = require('typescript');
 
 const app = express();
 const PORT = 3000;
@@ -87,6 +87,44 @@ app.post('/arrays', (req, res) => {
     const doubled = double.map((value) => value *= 2);
     res.send({ result: doubled });
   }
+});
+
+app.post('/sith', (req, res) => {
+  const { body } = req;
+  let returnString = '';
+  const randomTexts = ['ERGGH...', 'I am sith', 'wraghhh', 'my power is unlimited'];
+  if (body.text !== undefined || body.text !== null) {
+    let stringText = body.text.split('.');
+    stringText = stringText.filter((value) => {
+      if (value !== '') {
+        return value;
+      }
+    });
+    stringText = stringText.map((sentence) => {
+      const wordsInSentence = sentence.split(' ');
+      if (wordsInSentence.length % 2 === 0) {
+        let evenSentence = '';
+        for (let i = 0; i < wordsInSentence.length - 1; i += 2) {
+          evenSentence += `${wordsInSentence[i + 1]} ${wordsInSentence[i]}`;
+        }
+        return evenSentence;
+      }
+      let nonEvenSentence = '';
+      for (let i = 0; i < wordsInSentence.length; i += 2) {
+        if (i === wordsInSentence.length) {
+          nonEvenSentence += wordsInSentence[i];
+        }
+        nonEvenSentence += `${wordsInSentence[i + 1]} ${wordsInSentence[i]} `;
+      }
+      return nonEvenSentence;
+    });
+    stringText.forEach((sentence) => {
+      returnString += `${sentence}.${randomTexts[Math.floor(randomTexts.length * Math.random())]}.`;
+    });
+    console.log(returnString);
+    res.send({sith_text: returnString});
+  }
+  res.send({ error: 'Feed me some text you have to, padawan young you are. Hmmm.' });
 });
 
 app.listen(PORT, () => {
