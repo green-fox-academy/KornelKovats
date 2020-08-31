@@ -65,6 +65,30 @@ app.post('/dountil/:action', (req, res) => {
   res.send(number);
 });
 
+app.post('/arrays', (req, res) => {
+  const { body } = req;
+
+  if (body.numbers === undefined || body.numbers.length === 0 || body.what === undefined) {
+    res.send({ error: 'Please provide what to do with the numbers!' });
+  } else if (body.what === 'sum') {
+    let sum = 0;
+    body.numbers.forEach((element) => {
+      sum += element;
+    });
+    res.send({ result: sum });
+  } else if (body.what === 'multiply') {
+    let multiply = 1;
+    body.numbers.forEach((element) => {
+      multiply *= element;
+    });
+    res.send({ result: multiply });
+  } else if (body.what === 'double') {
+    const double = req.body.numbers;
+    const doubled = double.map((value) => value *= 2);
+    res.send({ result: doubled });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
