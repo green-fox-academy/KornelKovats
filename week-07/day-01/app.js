@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 
 const bodyParser = require('body-parser');
-const { isLabeledStatement, walkUpBindingElementsAndPatterns } = require('typescript');
+const { isLabeledStatement, walkUpBindingElementsAndPatterns, isConstructorDeclaration } = require('typescript');
+const { text } = require('body-parser');
 
 const app = express();
 const PORT = 3000;
@@ -67,7 +68,6 @@ app.post('/dountil/:action', (req, res) => {
 
 app.post('/arrays', (req, res) => {
   const { body } = req;
-
   if (body.numbers === undefined || body.numbers.length === 0 || body.what === undefined) {
     res.send({ error: 'Please provide what to do with the numbers!' });
   } else if (body.what === 'sum') {
@@ -122,9 +122,29 @@ app.post('/sith', (req, res) => {
       returnString += `${sentence}.${randomTexts[Math.floor(randomTexts.length * Math.random())]}.`;
     });
     console.log(returnString);
-    res.send({sith_text: returnString});
+    res.send({ sith_text: returnString });
   }
   res.send({ error: 'Feed me some text you have to, padawan young you are. Hmmm.' });
+});
+
+app.post('/translate', (req, res) => {
+  const { body } = req;
+  const getText = body.text.split('');
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let returningText = '';
+  if (body.text !== undefined) {
+    console.log(getText);
+    getText.forEach((char) => {
+      let helperText = char;
+      vowels.forEach((vowel) => {
+        if (char.toLowerCase() === vowel) {
+          helperText += `v${helperText}`;
+        }
+      });
+      returningText += helperText;
+    });
+  }
+  res.send({ translated: returningText });
 });
 
 app.listen(PORT, () => {
