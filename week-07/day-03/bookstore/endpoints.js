@@ -34,7 +34,7 @@ router.get('/api/allbook', (req, res) => {
     join author on book_mast.aut_id=author.aut_id 
     join category on category.cate_id=book_mast.cate_id
     join publisher on publisher.pub_id=book_mast.pub_id 
-    where publisher.cate_descrip='${req.query.pub_name}';`;
+    where publisher.pub_name='${req.query.publisher}';`;
     conn.query(query, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);

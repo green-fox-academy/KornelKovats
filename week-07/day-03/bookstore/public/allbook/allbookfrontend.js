@@ -1,8 +1,10 @@
 function reqListener() {
   const data = JSON.parse((this.responseText));
-
+  // select the table which is in the HTML
   const table = document.querySelector('table');
+  // clear this table content in case if reselecting the elements
   table.innerHTML = '';
+  // create the firstRow titles and add to the table
   const filterNameROW = document.createElement('tr');
   table.appendChild(filterNameROW);
   const titleName = document.createElement('td');
@@ -35,23 +37,18 @@ function reqListener() {
   filterTextROW.appendChild(publisherTextbox);
   filterTextROW.appendChild(priceTextbox);
 
-  const textBoxTitle = document.createElement('input');
-  const textBoxAuthor = document.createElement('input');
+  // creating the input field and add to table
   const textBoxCategory = document.createElement('input');
   const textBoxPublisher = document.createElement('input');
   const textBoxPrice = document.createElement('input');
 
-  titleTextbox.appendChild(textBoxTitle);
-  authorTextbox.appendChild(textBoxAuthor);
   categoryTextbox.appendChild(textBoxCategory);
   publisherTextbox.appendChild(textBoxPublisher);
   priceTextbox.appendChild(textBoxPrice);
 
-  textBoxTitle.setAttribute('class', 'title');
-  textBoxAuthor.setAttribute('class', 'author');
-  textBoxCategory.setAttribute('class', 'category');
-  textBoxPublisher.setAttribute('class', 'publisher');
-  textBoxPrice.setAttribute('class', 'price');
+  textBoxCategory.setAttribute('id', 'category');
+  textBoxPublisher.setAttribute('id', 'publisher');
+  textBoxPrice.setAttribute('id', 'price');
 
   data.forEach((element) => {
     const newRow = document.createElement('tr');
@@ -64,7 +61,7 @@ function reqListener() {
     title.innerHTML = element.book_name;
     author.innerHTML = element.aut_name;
     category.innerHTML = element.cate_descrip;
-    publisherName.innerHTML = element.pub_name;
+    publisher.innerHTML = element.pub_name;
     price.innerHTML = element.book_price;
     newRow.appendChild(title);
     newRow.appendChild(author);
@@ -83,15 +80,28 @@ button.style.height = '100px';
 body.appendChild(button);
 
 button.onclick = () => {
-  const categoryValue = document.querySelector('.category');
-  const categorySearchValue = categoryValue.value;
-  console.log(categorySearchValue);
-
-  if (categorySearchValue !== null) {
+  const categoryValue = document.querySelector('#category').value;
+  const publisherValue = document.querySelector('#publisher').value;
+  const priceValue = document.querySelector('#price').value;
+  if (categoryValue !== '') {
     const xhr = new XMLHttpRequest();
-
     xhr.addEventListener('load', reqListener);
-    xhr.open('GET', `http://localhost:3000/api/allbook?category=${categorySearchValue}`);
+    xhr.open('GET', `http://localhost:3000/api/allbook?category=${categoryValue}`);
+    xhr.send();
+  } else if (publisherValue !== '') {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener('load', reqListener);
+    xhr.open('GET', `http://localhost:3000/api/allbook?publisher=${publisherValue}`);
+    xhr.send();
+  } else if (priceValue !== '') {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener('load', reqListener);
+    xhr.open('GET', `http://localhost:3000/api/allbook?price=${priceValue}`);
+    xhr.send();
+  } else {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener('load', reqListener);
+    xhr.open('GET', 'http://localhost:3000/api/allbook');
     xhr.send();
   }
 };
