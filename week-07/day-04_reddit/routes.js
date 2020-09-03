@@ -83,7 +83,7 @@ router.delete('/posts/:id', (req, res) => {
       res.sendStatus(500);
       return null;
     }
-    let postToDelete = rows;
+    const postToDelete = rows;
     conn.query('DELETE FROM posts where id=?', id, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);
@@ -91,6 +91,26 @@ router.delete('/posts/:id', (req, res) => {
         return null;
       }
       return res.status(200).send(postToDelete);
+    });
+  });
+});
+router.put('/posts/:id', (req, res) => {
+  const whatNeedstoModified = [req.body.title, req.body.url, req.params.id];
+  const id = [req.params.id];
+  console.log(whatNeedstoModified);
+  conn.query('UPDATE posts SET title=?, url=? where id=?;', whatNeedstoModified, (err, rows) => {
+    if (err) {
+      console.error(`Cannot retrieve data: ${err.toString()}`);
+      res.sendStatus(500);
+      return null;
+    }
+    conn.query('SELECT * FROM posts where id=?', id, (err, rows) => {
+      if (err) {
+        console.error(`Cannot retrieve data: ${err.toString()}`);
+        res.sendStatus(500);
+        return null;
+      }
+      return res.status(200).json(rows);
     });
   });
 });
