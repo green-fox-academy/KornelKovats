@@ -15,3 +15,6 @@ CREATE TABLE 'reddit'.'posts' (
 
 -- changed the default value of the score because it has to be 0 by default
   ALTER TABLE reddit.posts MODIFY COLUMN score INT NOT NULL DEFAULT 0;
+
+
+  local storage; -- 

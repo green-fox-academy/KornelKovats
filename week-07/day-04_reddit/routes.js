@@ -5,13 +5,17 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/posts', (req, res) => {
+  const postsObj = {
+    posts: [],
+  };
   conn.query('SELECT * FROM posts;', (err, rows) => {
     if (err) {
       console.error(`Cannot retrieve data: ${err.toString()}`);
       res.sendStatus(500);
       return null;
     }
-    return res.status(200).json(rows);
+    postsObj.posts = rows;
+    return res.status(200).json(postsObj);
   });
 });
 
@@ -71,4 +75,23 @@ router.put('/posts/:id/downvote', (req, res) => {
   });
 });
 
+router.delete('/posts/:id', (req, res) => {
+  const id = [req.params.id];
+  conn.query('SELECT * FROM posts where id=?', id, (err, rows) => {
+    if (err) {
+      console.error(`Cannot retrieve data: ${err.toString()}`);
+      res.sendStatus(500);
+      return null;
+    }
+    let postToDelete = rows;
+    conn.query('DELETE FROM posts where id=?', id, (err, rows) => {
+      if (err) {
+        console.error(`Cannot retrieve data: ${err.toString()}`);
+        res.sendStatus(500);
+        return null;
+      }
+      return res.status(200).send(postToDelete);
+    });
+  });
+});
 module.exports = router;
