@@ -1,4 +1,5 @@
 const express = require('express');
+const { createSemicolonClassElement } = require('typescript');
 const conn = require('./connectionDB');
 
 const router = express.Router();
@@ -20,25 +21,38 @@ router.get('/posts', (req, res) => {
 });
 
 router.post('/posts', (req, res) => {
-  const post = [req.body.title, req.body.url];
-  conn.query('INSERT INTO posts (title,url) values (?,?);', post, (err, rows) => {
-    if (err) {
-      console.error(`Cannot retrieve data: ${err.toString()}`);
-      res.sendStatus(500);
-      return null;
-    }
-    conn.query(`SELECT * FROM posts where id=${rows.insertId}`, (err, rows) => {
+  req.accepts('application/json');
+  const post = [req.body.title, req.body.url, req.headers.username];
+  if (req.headers.username !== undefined) {
+    conn.query('INSERT INTO users (username) values (?);', req.headers.username, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);
         res.sendStatus(500);
         return null;
       }
-      return res.status(200).json(rows);
     });
-  });
+    conn.query('INSERT INTO posts (title,url,id_user) values (?,?,(SELECT id_user FROM users where username=?));', post, (err, rows) => {
+      if (err) {
+        console.error(`Cannot retrieve data: ${err.toString()}`);
+        res.sendStatus(500);
+        return null;
+      }
+      conn.query(`SELECT * FROM posts where id=${rows.insertId}`, (err, rows) => {
+        if (err) {
+          console.error(`Cannot retrieve data: ${err.toString()}`);
+          res.sendStatus(500);
+          return null;
+        }
+        return res.status(200).json(rows);
+      });
+    });
+  } else {
+    res.status(200).send('Can not make post without username');
+  }
 });
 
 router.put('/posts/:id/upvote', (req, res) => {
+  req.accepts('application/json');
   const id = [req.params.id];
   conn.query('UPDATE posts set score=score+1 where id=?;', id, (err, rows) => {
     if (err) {
@@ -57,6 +71,7 @@ router.put('/posts/:id/upvote', (req, res) => {
   });
 });
 router.put('/posts/:id/downvote', (req, res) => {
+  req.accepts('application/json');
   const id = [req.params.id];
   conn.query('UPDATE posts set score=score-1 where id=?;', id, (err, rows) => {
     if (err) {
@@ -76,6 +91,7 @@ router.put('/posts/:id/downvote', (req, res) => {
 });
 
 router.delete('/posts/:id', (req, res) => {
+  req.accepts('application/json');
   const id = [req.params.id];
   conn.query('SELECT * FROM posts where id=?', id, (err, rows) => {
     if (err) {
@@ -95,9 +111,9 @@ router.delete('/posts/:id', (req, res) => {
   });
 });
 router.put('/posts/:id', (req, res) => {
+  req.accepts('application/json');
   const whatNeedstoModified = [req.body.title, req.body.url, req.params.id];
   const id = [req.params.id];
-  console.log(whatNeedstoModified);
   conn.query('UPDATE posts SET title=?, url=? where id=?;', whatNeedstoModified, (err, rows) => {
     if (err) {
       console.error(`Cannot retrieve data: ${err.toString()}`);
