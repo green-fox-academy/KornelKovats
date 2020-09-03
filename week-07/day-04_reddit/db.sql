@@ -11,3 +11,7 @@ CREATE TABLE 'reddit'.'posts' (
   'vote' INT NULL,
   PRIMARY KEY ('id'),
   UNIQUE INDEX 'id_UNIQUE' ('id' ASC) VISIBLE);
+
+
+-- changed the default value of the score because it has to be 0 by default
+  ALTER TABLE reddit.posts MODIFY COLUMN score INT NOT NULL DEFAULT 0;
