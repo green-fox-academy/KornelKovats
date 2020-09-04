@@ -74,35 +74,48 @@ function reqListener() {
 }
 
 const body = document.querySelector('body');
+body.style.display = 'flex';
+
+body.setAttribute('style', 'justify-content: center;');
+
 const button = document.createElement('button');
 button.style.width = '100px';
 button.style.height = '100px';
 body.appendChild(button);
 
+document.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    const xhr = new XMLHttpRequest();
+    const categoryValue = document.querySelector('#category').value;
+    const publisherValue = document.querySelector('#publisher').value;
+    const priceValue = document.querySelector('#price').value;
+    if (categoryValue !== '') {
+      xhr.addEventListener('load', reqListener);
+      xhr.open('GET', `http://localhost:3000/api/allbook?category=${categoryValue}`);
+      xhr.send();
+    } else if (publisherValue !== '') {
+      xhr.addEventListener('load', reqListener);
+      xhr.open('GET', `http://localhost:3000/api/allbook?publisher=${publisherValue}`);
+      xhr.send();
+    } else if (priceValue !== '') {
+      xhr.addEventListener('load', reqListener);
+      xhr.open('GET', `http://localhost:3000/api/allbook?price=${priceValue}`);
+      xhr.send();
+    } else {
+      xhr.addEventListener('load', reqListener);
+      xhr.open('GET', 'http://localhost:3000/api/allbook');
+      xhr.send();
+    }
+  }
+});
+
 button.onclick = () => {
-  const categoryValue = document.querySelector('#category').value;
-  const publisherValue = document.querySelector('#publisher').value;
-  const priceValue = document.querySelector('#price').value;
-  if (categoryValue !== '') {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', reqListener);
-    xhr.open('GET', `http://localhost:3000/api/allbook?category=${categoryValue}`);
-    xhr.send();
-  } else if (publisherValue !== '') {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', reqListener);
-    xhr.open('GET', `http://localhost:3000/api/allbook?publisher=${publisherValue}`);
-    xhr.send();
-  } else if (priceValue !== '') {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', reqListener);
-    xhr.open('GET', `http://localhost:3000/api/allbook?price=${priceValue}`);
-    xhr.send();
+  const bodyka = document.querySelector('body');
+  console.log(bodyka.style.backgroundColor);
+  if (bodyka.style.backgroundColor === 'rgb(204, 0, 102)') {
+    bodyka.setAttribute('style', 'background-color: #99ff66;');
   } else {
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', reqListener);
-    xhr.open('GET', 'http://localhost:3000/api/allbook');
-    xhr.send();
+    bodyka.setAttribute('style', 'background-color: #cc0066;');
   }
 };
 

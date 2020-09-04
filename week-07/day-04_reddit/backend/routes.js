@@ -1,5 +1,4 @@
 const express = require('express');
-const { createSemicolonClassElement } = require('typescript');
 const conn = require('./connectionDB');
 
 const router = express.Router();
