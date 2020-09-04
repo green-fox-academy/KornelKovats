@@ -24,6 +24,8 @@ router.post('/posts', (req, res) => {
   req.accepts('application/json');
   const post = [req.body.title, req.body.url, req.headers.username];
   if (req.headers.username !== undefined) {
+    // TODO: handle if user exists
+    // TODO: use last insert id
     conn.query('INSERT INTO users (username) values (?);', req.headers.username, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);
@@ -47,6 +49,7 @@ router.post('/posts', (req, res) => {
       });
     });
   } else {
+    // TODO: fix HTTP status code
     res.status(200).send('Can not make post without username');
   }
 });
