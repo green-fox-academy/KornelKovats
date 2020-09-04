@@ -6,18 +6,19 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/posts', (req, res) => {
-  const postsObj = {
-    posts: [],
-  };
-  conn.query('SELECT * FROM posts;', (err, rows) => {
-    if (err) {
-      console.error(`Cannot retrieve data: ${err.toString()}`);
-      res.sendStatus(500);
-      return null;
-    }
-    postsObj.posts = rows;
-    return res.status(200).json(postsObj);
-  });
+  if (req.headers.username !== undefined) {
+    conn.query('SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner FROM posts LEFT JOIN users ON users.id=posts.id_user;', (err, rows) => {
+      if (err) {
+        console.error(`Cannot retrieve data: ${err.toString()}`);
+        res.sendStatus(500);
+        return null;
+      }
+
+      return res.status(200).json({ posts: rows });
+    });
+  } else {
+    res.status(404).send('Can not get posts without username validating');
+  }
 });
 
 router.post('/posts', (req, res) => {
