@@ -7,17 +7,31 @@ router.use(express.json());
 
 router.get('/posts', (req, res) => {
   if (req.headers.username !== undefined) {
-    conn.query('SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner FROM posts LEFT JOIN users ON users.id=posts.id_user;', (err, rows) => {
+    // select user from users
+    conn.query(`SELECT * FROM users WHERE username='${req.headers.username}';`, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);
         res.sendStatus(500);
         return null;
       }
-
-      return res.status(200).json({ posts: rows });
+      // handle if user exists
+      if (rows.length !== 0) {
+        conn.query(`SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${rows[0].id}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user;`,
+          (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            return res.status(200).json(rows);
+          });
+      } else {
+        res.status(404).send('Username doesn\'t exist');
+      }
     });
   } else {
-    res.status(404).send('Can not get posts without username validating');
+    // TODO: fix HTTP status code
+    res.status(404).send('Can not get posts without username');
   }
 });
 
