@@ -1,5 +1,6 @@
 const express = require('express');
-const conn = require('./connectionDB');
+const conn = require('../connectionDB');
+const { route } = require('../router');
 
 const router = express.Router();
 router.use(express.json());
@@ -21,35 +22,40 @@ router.get('/posts', (req, res) => {
 
 router.post('/posts', (req, res) => {
   req.accepts('application/json');
-  const post = [req.body.title, req.body.url, req.headers.username];
-  if (req.headers.username !== undefined) {
-    // TODO: handle if user exists
-    // TODO: use last insert id
-    conn.query('INSERT INTO users (username) values (?);', req.headers.username, (err, rows) => {
+  // eslint-disable-next-line max-len
+  if (req.headers.username !== undefined && req.body.title !== undefined && req.body.url !== undefined) {
+    // select user from users
+    conn.query(`SELECT * FROM users WHERE username='${req.headers.username}';`, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);
         res.sendStatus(500);
         return null;
       }
-    });
-    conn.query('INSERT INTO posts (title,url,id_user) values (?,?,(SELECT id_user FROM users where username=?));', post, (err, rows) => {
-      if (err) {
-        console.error(`Cannot retrieve data: ${err.toString()}`);
-        res.sendStatus(500);
-        return null;
+      // handle if user exists
+      if (rows[0].length !== 0) {
+        const insertedUserValue = [req.body.title, req.body.url, rows[0].id];
+        conn.query('INSERT INTO posts (title,url,id_user) values (?,?,?);', insertedUserValue, (err, rows) => {
+          if (err) {
+            console.error(`Cannot retrieve data: ${err.toString()}`);
+            res.sendStatus(500);
+            return null;
+          }
+          conn.query(`SELECT * FROM posts where id='${rows.insertId}';`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            return res.status(200).json(rows);
+          });
+        });
+      } else {
+        res.status(404).send('Username doesn\'t exist');
       }
-      conn.query(`SELECT * FROM posts where id=${rows.insertId}`, (err, rows) => {
-        if (err) {
-          console.error(`Cannot retrieve data: ${err.toString()}`);
-          res.sendStatus(500);
-          return null;
-        }
-        return res.status(200).json(rows);
-      });
     });
   } else {
     // TODO: fix HTTP status code
-    res.status(200).send('Can not make post without username');
+    res.status(404).send('Can not make post without username or title or url');
   }
 });
 
@@ -132,4 +138,5 @@ router.put('/posts/:id', (req, res) => {
     });
   });
 });
+
 module.exports = router;

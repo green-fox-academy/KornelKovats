@@ -1,9 +1,8 @@
 const express = require('express');
-const endPoints = require('./routes');
+const router = require('./router');
 
 const app = express();
-app.use(endPoints);
-
+router(app);
 const PORT = 3000;
 
 app.listen(PORT, () => {
