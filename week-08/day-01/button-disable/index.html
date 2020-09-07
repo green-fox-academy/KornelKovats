@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button-disable</title>
+  </head>
+  <body>
+    <form action="/index2.html" method="POST" id="pet_form">
+      <h3>What is your favourite pet?</h3>
+      <input
+        type="radio"
+        id="dog"
+        class="fav_animals"
+        name="favourite_animal"
+        value="dog"
+      />
+      <label for="dog">Dog</label><br />
+      <input
+        type="radio"
+        id="cat"
+        class="fav_animals"
+        name="favourite_animal"
+        value="cat"
+      />
+      <label for="cat">Cat</label><br />
+      <input
+        type="radio"
+        id="viktor"
+        class="fav_animals"
+        name="favourite_animal"
+        value="viktor"
+      />
+      <label for="viktor">Viktor the goldfish</label>
+
+      <h3>Do you want to sign up for cat facts?</h3>
+      <input type="radio" id="yes" name="cat_facts" value="yes" />
+      <label for="cat">Yes</label><br />
+      <input type="radio" id="no" name="cat_facts" value="no" />
+      <label for="viktor">No</label>
+      <br />
+      <button type="button" id="btn_lovecats" disabled>I love cats</button>
+      <button type="button" id="btn_signup" disabled>Sign Up</button>
+    </form>
+
+    <script>
+      const form = document.querySelector("#pet_form");
+      let dog = document.querySelector("#dog");
+      let btn_lovecats = document.querySelector("#btn_lovecats");
+      let btn_signup = document.querySelector('#btn_signup');
+      const fav_animals = document.querySelectorAll('input[name="favourite_animal"]');
+      console.log(fav_animals);
+      fav_animals.forEach((element) => {
+        element.addEventListener("change", () => {
+          if (element.value === "cat") {
+            btn_lovecats.disabled = false;
+          } else {
+            btn_lovecats.disabled = true;
+          }
+          if(element.value==='cat'|| element.value ==='dog'){
+            btn_signup.disabled = false;
+          }else{
+            btn_signup.disabled = true;
+          }
+          if(element.value === 'viktor'){
+            btn_signup.disabled = false;
+          }
+        });
+      });
+      btn_lovecats.addEventListener('click',()=>{
+          alert('Thank you, you\'ve successfully signed up for cat facts');
+      })
+      btn_signup.addEventListener('click',()=>{
+          alert('Sigh, we still added you to the cat facts list');
+      })
+
+    </script>
+  </body>
+</html>
