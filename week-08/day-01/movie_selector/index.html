@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie selector</title>
+</head>
+<body>
+    <h2>Movie Selector</h2>
+    <form action="">
+        <select name="genres" id="genres">
+            <option value="sci-fi">Sci-fi</option>
+            <option value="drama">Drama</option>
+            <option value="comedy">Comedy</option>
+          </select><br>
+          <select name="movies" id="movies">
+            <option value="space-odyssey" disabled>2001: A Space Odyssey</option>
+            <option value="darkest-hour"disabled>Darkest Hour</option>
+            <option value="therewillbeblood"disabled>There Will Be Blood</option>
+            <option value="american-beauty"disabled>American Beauty</option>
+            <option value="airplane"disabled>Airplane!</option>
+            <option value="deadpool"disabled>Deadpool</option>
+            <option value="waynesworld"disabled>Wayne's World</option>
+          </select><br>
+          The selected movie is: 
+    </form>
+    <script>
+        const genres = document.querySelector('select[name="genres"]');
+        const movies = document.querySelector('select[name="movies"]');
+        //console.log(movies);
+        console.log(genres[1]);
+        for (let i = 0; i < genres.length; i++) {
+            genres[i].addEventListener("change",() => {
+                console.log('bent vagyok?')
+                if(genres[i].value === 'sci-fi'){
+                    console.log('jo amit csinalok');
+                    for (let i = 0; i < movies.length; i++) {
+                        if(movies[i].value === 'space-odyssey'|| movies[i].value === 'darkest-hour'){
+                            console.log('asdasdasd');
+                            movies[i].disabled = false
+                        }else{
+                            movies[i].disabled = true;
+                        }
+                        
+                    }
+                }
+                if(genres[i].value === 'drama'){
+                    
+                }
+                
+            });
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
