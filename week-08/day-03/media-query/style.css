@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+}
+.item {
+    width: 150px;
+    height: 150px;
+}
+.green {
+    background-color: green;
+
+}
+.yellow{
+    background-color: yellow;
+    flex-grow: 1;
+
+}
+.purple{
+    background-color: purple;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+    }
+    .item{
+        width:100%;
+    }
+  }
