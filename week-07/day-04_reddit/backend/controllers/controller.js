@@ -112,6 +112,25 @@ router.put('/posts/:id/upvote', (req, res) => {
     });
   });
 });
+router.put('/posts/:id/upvotetest', (req, res) => {
+  req.accepts('application/json');
+  const id = [req.params.id];
+  conn.query('UPDATE posts set score=score+1 where id=?;', id, (err, rows) => {
+    if (err) {
+      console.error(`Cannot retrieve data: ${err.toString()}`);
+      res.sendStatus(500);
+      return null;
+    }
+    conn.query('SELECT * FROM posts where id=?', id, (err, rows) => {
+      if (err) {
+        console.error(`Cannot retrieve data: ${err.toString()}`);
+        res.sendStatus(500);
+        return null;
+      }
+      return res.status(200).json(rows);
+    });
+  });
+});
 router.put('/posts/:id/downvote', (req, res) => {
   req.accepts('application/json');
   const id = [req.params.id];
