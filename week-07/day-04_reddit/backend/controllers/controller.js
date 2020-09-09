@@ -114,22 +114,26 @@ router.put('/posts/:id/upvote', (req, res) => {
 });
 router.put('/posts/:id/upvotetest', (req, res) => {
   req.accepts('application/json');
-  const id = [req.params.id];
-  conn.query('UPDATE posts set score=score+1 where id=?;', id, (err, rows) => {
-    if (err) {
-      console.error(`Cannot retrieve data: ${err.toString()}`);
-      res.sendStatus(500);
-      return null;
-    }
-    conn.query('SELECT * FROM posts where id=?', id, (err, rows) => {
+  if (req.headers.username !== undefined) {
+    conn.query(`SELECT username, id FROM users WHERE username='${req.headers.username}'`, (err, rows) => {
       if (err) {
         console.error(`Cannot retrieve data: ${err.toString()}`);
         res.sendStatus(500);
         return null;
       }
-      return res.status(200).json(rows);
+      // check the votes for this user 
+      conn.query(`SELECT * FROM votes WHERE user_id='${rows[0].id}' and post_id='${req.params.id}'`, (err, rows) => {
+        if (err) {
+          console.error(`Cannot retrieve data: ${err.toString()}`);
+          res.sendStatus(500);
+          return null;
+        }
+        res.json(rows);
+      });
     });
-  });
+  } else {
+    res.status(404).send('Can not Update post without username');
+  }
 });
 router.put('/posts/:id/downvote', (req, res) => {
   req.accepts('application/json');
