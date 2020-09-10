@@ -27,8 +27,7 @@ router.get('/posts', (req, res) => {
                 return null;
               }
               return res.status(200).json(rows);
-            },
-          );
+          });
         } else {
           res.status(404).send("Username doesn't exist");
         }
@@ -121,14 +120,48 @@ router.put('/posts/:id/upvotetest', (req, res) => {
         res.sendStatus(500);
         return null;
       }
-      // check the votes for this user 
+
+      const userID = rows[0].id;
+      // check the votes for this user
       conn.query(`SELECT * FROM votes WHERE user_id='${rows[0].id}' and post_id='${req.params.id}'`, (err, rows) => {
         if (err) {
           console.error(`Cannot retrieve data: ${err.toString()}`);
           res.sendStatus(500);
           return null;
         }
-        res.json(rows);
+        console.log(rows[0]);
+        // if rows.lenght===0 means no vote has been processed with this user so needs to make to 1
+        if (rows.length === 0) {
+          conn.query(`INSERT INTO votes (user_id, post_id, vote) VALUES('${userID}','${req.params.id}',1);`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            conn.query(`UPDATE posts SET score=score+1 WHERE id='${req.params.id}';`, (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              conn.query(
+                `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+                (err, rows) => {
+                  if (err) {
+                    console.error(`Cannot retrieve data: ${err.toString()}`);
+                    res.sendStatus(500);
+                    return null;
+                  }
+                  return res.status(200).json(rows);
+                });
+            });
+          });
+          // if rows[0].vote ==== -1 means I need to make the vote to 0
+        } else if (rows[0].vote === -1) {
+
+        } else if (rows[0].vote === 0) {
+
+        }
       });
     });
   } else {
