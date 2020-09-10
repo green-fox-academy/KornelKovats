@@ -261,7 +261,6 @@ router.put('/posts/:id/downvotetest', (req, res) => {
           res.sendStatus(500);
           return null;
         }
-        console.log(rows[0]);
         // if rows.lenght===0 means no vote has been processed with this user so needs to make to 1
         if (rows.length === 0) {
           conn.query(`INSERT INTO votes (user_id, post_id, vote) VALUES('${userID}','${req.params.id}',-1);`, (err, rows) => {
