@@ -252,7 +252,6 @@ router.put('/posts/:id/downvotetest', (req, res) => {
         res.sendStatus(500);
         return null;
       }
-
       const userID = rows[0].id;
       // check the votes for this user
       conn.query(`SELECT * FROM votes WHERE user_id='${rows[0].id}' and post_id='${req.params.id}'`, (err, rows) => {

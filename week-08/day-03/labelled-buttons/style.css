@@ -1,0 +1,39 @@
+body{
+    background-color:#030042;
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    margin:100px;
+    display: flex;
+    flex-flow: column;
+}
+
+.delete{
+    background-color: crimson; 
+    border: none;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    margin:30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sure{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    margin:30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
