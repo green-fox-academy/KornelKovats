@@ -129,7 +129,6 @@ router.put('/posts/:id/upvotetest', (req, res) => {
           res.sendStatus(500);
           return null;
         }
-        console.log(rows[0]);
         // if rows.lenght===0 means no vote has been processed with this user so needs to make to 1
         if (rows.length === 0) {
           conn.query(`INSERT INTO votes (user_id, post_id, vote) VALUES('${userID}','${req.params.id}',1);`, (err, rows) => {
@@ -158,9 +157,66 @@ router.put('/posts/:id/upvotetest', (req, res) => {
           });
           // if rows[0].vote ==== -1 means I need to make the vote to 0
         } else if (rows[0].vote === -1) {
-
+          conn.query(`UPDATE votes SET vote=vote+1 WHERE post_id='${req.params.id}';`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            conn.query(`UPDATE posts SET score=score+1 WHERE id='${req.params.id}';`, (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              conn.query(
+                `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+                (err, rows) => {
+                  if (err) {
+                    console.error(`Cannot retrieve data: ${err.toString()}`);
+                    res.sendStatus(500);
+                    return null;
+                  }
+                  return res.status(200).json(rows);
+                });
+            });
+          });
         } else if (rows[0].vote === 0) {
-
+          conn.query(`UPDATE votes SET vote=vote+1 WHERE post_id='${req.params.id}';`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            conn.query(`UPDATE posts SET score=score+1 WHERE id='${req.params.id}';`, (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              conn.query(
+                `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+                (err, rows) => {
+                  if (err) {
+                    console.error(`Cannot retrieve data: ${err.toString()}`);
+                    res.sendStatus(500);
+                    return null;
+                  }
+                  return res.status(200).json(rows);
+                });
+            });
+          });
+        }else {
+          conn.query(
+            `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+            (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              return res.status(200).json(rows);
+            });
         }
       });
     });
@@ -187,7 +243,120 @@ router.put('/posts/:id/downvote', (req, res) => {
     });
   });
 });
+router.put('/posts/:id/downvotetest', (req, res) => {
+  req.accepts('application/json');
+  if (req.headers.username !== undefined) {
+    conn.query(`SELECT username, id FROM users WHERE username='${req.headers.username}'`, (err, rows) => {
+      if (err) {
+        console.error(`Cannot retrieve data: ${err.toString()}`);
+        res.sendStatus(500);
+        return null;
+      }
 
+      const userID = rows[0].id;
+      // check the votes for this user
+      conn.query(`SELECT * FROM votes WHERE user_id='${rows[0].id}' and post_id='${req.params.id}'`, (err, rows) => {
+        if (err) {
+          console.error(`Cannot retrieve data: ${err.toString()}`);
+          res.sendStatus(500);
+          return null;
+        }
+        console.log(rows[0]);
+        // if rows.lenght===0 means no vote has been processed with this user so needs to make to 1
+        if (rows.length === 0) {
+          conn.query(`INSERT INTO votes (user_id, post_id, vote) VALUES('${userID}','${req.params.id}',-1);`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            conn.query(`UPDATE posts SET score=score-1 WHERE id='${req.params.id}';`, (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              conn.query(
+                `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+                (err, rows) => {
+                  if (err) {
+                    console.error(`Cannot retrieve data: ${err.toString()}`);
+                    res.sendStatus(500);
+                    return null;
+                  }
+                  return res.status(200).json(rows);
+                });
+            });
+          });
+          // if rows[0].vote ==== -1 means I need to make the vote to 0
+        } else if (rows[0].vote === 0) {
+          conn.query(`UPDATE votes SET vote=vote-1 WHERE post_id='${req.params.id}';`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            conn.query(`UPDATE posts SET score=score-1 WHERE id='${req.params.id}';`, (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              conn.query(
+                `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+                (err, rows) => {
+                  if (err) {
+                    console.error(`Cannot retrieve data: ${err.toString()}`);
+                    res.sendStatus(500);
+                    return null;
+                  }
+                  return res.status(200).json(rows);
+                });
+            });
+          });
+        } else if (rows[0].vote === 1) {
+          conn.query(`UPDATE votes SET vote=vote-1 WHERE post_id='${req.params.id}';`, (err, rows) => {
+            if (err) {
+              console.error(`Cannot retrieve data: ${err.toString()}`);
+              res.sendStatus(500);
+              return null;
+            }
+            conn.query(`UPDATE posts SET score=score-1 WHERE id='${req.params.id}';`, (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              conn.query(
+                `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+                (err, rows) => {
+                  if (err) {
+                    console.error(`Cannot retrieve data: ${err.toString()}`);
+                    res.sendStatus(500);
+                    return null;
+                  }
+                  return res.status(200).json(rows);
+                });
+            });
+          });
+        }else{
+          conn.query(
+            `SELECT posts.id, posts.title, posts.url, posts.date_time, posts.score, username as owner,(SELECT vote FROM votes WHERE votes.user_id='${userID}' and votes.post_id=posts.id) as vote FROM posts LEFT JOIN users ON users.id=posts.id_user WHERE posts.id='${req.params.id}';`,
+            (err, rows) => {
+              if (err) {
+                console.error(`Cannot retrieve data: ${err.toString()}`);
+                res.sendStatus(500);
+                return null;
+              }
+              return res.status(200).json(rows);
+            });
+        }
+      });
+    });
+  } else {
+    res.status(404).send('Can not Update post without username');
+  }
+});
 router.delete('/posts/:id', (req, res) => {
   req.accepts('application/json');
   const id = [req.params.id];
