@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="indexstyle.css">
+    <link rel="stylesheet" type="text/css" href="styles/indexstyle.css">
     <title>Reddit app</title>
 </head>
 <body>
@@ -16,10 +16,8 @@
 
         <div class="main">
             <div class="posts_body">
-
             </div>
             <div class="submit">
-
                 <form action="/submit">
                     <input class="submitbutton"type="submit" value="SUBMIT A NEW POST" />
                 </form>
@@ -41,19 +39,19 @@
             <div class="post" id="{{id}}">
                 <tr>
                     <div class="voting">
-                            <button class="upvote{{vote}}"></button>
+                            <button class="upvote{{ vote }}" data-id="{{id}}"></button>
                             <h2 class="score">{{ score }}</h2>
-                            <button class="downvote{{vote}}"></button>
+                            <button class="downvote{{ vote }}" data-id="{{id}}"></button>
                     </div>
                     <div class="post-main">
                             <h2 class="title">{{ title }}</h2>
-                            <p class="content"> {{ cont }}</p>
+                            <p class="content"> Submitted {{ date_time }} days ago by <a href="#">{{owner}}</a></p>
                     </div>
                 </tr>
             </div>
             {{/each}}
           </script>
-        <script src="index.js"></script>
-        <script src="handlebars-v4.7.6.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/handlebars-v4.7.6.js"></script>
 </body>
 </html>

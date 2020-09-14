@@ -55,13 +55,17 @@ h1{
     margin: 10px;
 }
 .post{
+    border: solid black;
     width: 100%;
     display: flex;
     flex-direction: row;
+    margin: 3px;
+    background-color: white;
 }
 button{
     width: 20px;
     height: 20px;
+    margin: 10px;
 }
 .post_main{
     width: 100%;
@@ -81,15 +85,15 @@ tr{
     margin: 25px;
     background-color: white;
 }
-.upvote, .upvote0{
+.upvote, .upvote0, .upvote-1{
     background: url('/pictures/upvote.png') no-repeat;
 }
 .upvote1{
     background: url('/pictures/upvoted.png') no-repeat;
 }
-.downvote, .downvote0{
+.downvote, .downvote0, .downvote1{
     background: url('/pictures/downvote.png') no-repeat;
 }
-.downvote1{
+.downvote-1{
     background: url('/pictures/downvoted.png') no-repeat;
 }
