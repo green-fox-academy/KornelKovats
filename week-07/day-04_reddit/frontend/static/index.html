@@ -10,22 +10,50 @@
 <body>
 
         <header>
-            <img  class="spaceimage" src="space.jpg" alt="" >
+            <img  class="spaceimage" src="pictures/space.jpg" alt="" >
             <h1>S    P    A    C    E</h1>
         </header>
 
         <div class="main">
-            <table>
-                
-            </table>
+            <div class="posts_body">
+
+            </div>
             <div class="submit">
-                <a href="#">SUBMIT A NEW POST</a>
+
+                <form action="/submit">
+                    <input class="submitbutton"type="submit" value="SUBMIT A NEW POST" />
+                </form>
                 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, id.</p>
+                <h2>About r/space</h2>
+                <p>Share and discuss informative content</p>
+                <ul>
+                    <li>Astrophysics</li>
+                    <li>Cosmology</li>
+                    <li>Space Exploration</li>
+                    <li>Planetary Science</li>
+                    <li>Asrobiology</li>
+                </ul>
 
             </div>
         </div>
-
+        <script id="postsTemplate" type="text/x-hanlebars-template">
+            {{#each posts}}
+            <div class="post" id="{{id}}">
+                <tr>
+                    <div class="voting">
+                            <button class="upvote{{vote}}"></button>
+                            <h2 class="score">{{ score }}</h2>
+                            <button class="downvote{{vote}}"></button>
+                    </div>
+                    <div class="post-main">
+                            <h2 class="title">{{ title }}</h2>
+                            <p class="content"> {{ cont }}</p>
+                    </div>
+                </tr>
+            </div>
+            {{/each}}
+          </script>
         <script src="index.js"></script>
+        <script src="handlebars-v4.7.6.js"></script>
 </body>
 </html>
