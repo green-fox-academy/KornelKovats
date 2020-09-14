@@ -39,12 +39,13 @@
             <div class="post" id="{{id}}">
                 <tr>
                     <div class="voting">
-                            <button class="upvote{{ vote }}" data-id="{{id}}"></button>
+                            <button class="upvote up{{ vote }}" data-id="{{id}}"></button>
                             <h2 class="score">{{ score }}</h2>
-                            <button class="downvote{{ vote }}" data-id="{{id}}"></button>
+                            <button class="downvote down{{ vote }}" data-id="{{id}}"></button>
                     </div>
                     <div class="post-main">
                             <h2 class="title">{{ title }}</h2>
+                            <p class="url">   {{url}}</p>
                             <p class="content"> Submitted {{ date_time }} days ago by <a href="#">{{owner}}</a></p>
                     </div>
                 </tr>

@@ -85,15 +85,15 @@ tr{
     margin: 25px;
     background-color: white;
 }
-.upvote, .upvote0, .upvote-1{
+.upvote.up , .upvote.up0, .upvote.up-1{
     background: url('/pictures/upvote.png') no-repeat;
 }
-.upvote1{
+.upvote.up1{
     background: url('/pictures/upvoted.png') no-repeat;
 }
-.downvote, .downvote0, .downvote1{
+.downvote.down, .downvote.down0, .downvote.down1{
     background: url('/pictures/downvote.png') no-repeat;
 }
-.downvote-1{
+.downvote.down-1{
     background: url('/pictures/downvoted.png') no-repeat;
 }

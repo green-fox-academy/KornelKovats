@@ -1,3 +1,7 @@
+// get all posts
+const getPosts = document.querySelector('.posts_body');
+// console.log(getPosts);
+
 function reqListener() {
   const posts = JSON.parse((this.responseText));
   // console.log(posts);
@@ -12,9 +16,7 @@ function reqListener() {
       element.owner = 'anonymous';
     }
   });
-
   createPosts({ posts });
-  voting();
 }
 function loadPosts() {
   const xhr = new XMLHttpRequest();
@@ -26,17 +28,68 @@ function loadPosts() {
 }
 loadPosts();
 
-function voting() {
-  const getPosts = document.querySelectorAll('.post');
-  console.log(getPosts);
-  getPosts.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      const xhr = new XMLHttpRequest();
-      console.log(event.target.datset.id);
-      //xhr.open('PUT', 'http://localhost:3000/api/posts', true);
-    });
-  });
+function upVoting(element) {
+  const id = element.dataset.id;
+  console.log(element.dataset.id);
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    // In local files, status is 0 upon success in Mozilla Firefox
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      const { status } = xhr;
+      if (status === 0 || (status >= 200 && status < 400)) {
+        // The request has been completed successfully
+        loadPosts();
+        console.log(xhr.responseText);
+      } else {
+        // Oh no! There has been an error with the request!
+      }
+    }
+  };
+  xhr.open('PUT', `http://localhost:3000/api/posts/${id}/upvotetest`);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader('username', 'Kornel');
+  xhr.send();
 }
+function downVoting(element) {
+  const id = element.dataset.id;
+  console.log(element.dataset.id);
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = () => {
+    // In local files, status is 0 upon success in Mozilla Firefox
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      const { status } = xhr;
+      if (status === 0 || (status >= 200 && status < 400)) {
+        // The request has been completed successfully
+        loadPosts();
+        console.log(xhr.responseText);
+      } else {
+        // Oh no! There has been an error with the request!
+      }
+    }
+  };
+  xhr.open('PUT', `http://localhost:3000/api/posts/${id}/downvotetest`);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader('username', 'Kornel');
+  xhr.send();
+}
+
+getPosts.addEventListener('click', (event) => {
+  const classArray = event.target.className.split(' ');
+  if (classArray[0] === 'upvote') {
+    upVoting(event.target);
+  }else if(classArray[0] === 'downvote'){
+    downVoting(event.target);
+  }
+
+  // const xhr = new XMLHttpRequest();
+  // xhr.onreadystatechange = upVoting();
+  /* const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load', reqListener);
+  xhr.open('GET', 'http://localhost:3000/api/posts');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader('username', 'Kornel');
+  xhr.send(); */
+});
 
 function createPosts(posts) {
   const rawTemplate = document.getElementById('postsTemplate').innerHTML;
