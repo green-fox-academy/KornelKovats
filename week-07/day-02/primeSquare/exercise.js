@@ -1,5 +1,5 @@
 const section = document.querySelector('section');
-
+/* eslint-disable */
 for (let i = 1; i <= 100; i++) {
   const div = document.createElement('div');
   div.innerText = i;
@@ -13,14 +13,21 @@ const setClass = (element) => {
   }
 };
 
-let count = 1;
+let count = 0;
 const setAttributes = setInterval(() => {
   setClass(section.children[count]);
   count += 1;
   if (count === 100) {
     clearInterval(setAttributes);
   }
-}, 100);
+}, 500);
+
+/*for (let i = 0; i < 100; i++) {
+  const test = setInterval(() => {
+    setClass(section.children[i]);
+  }, 4000);
+}*/
+
 
 
 function prime(n, flag) {

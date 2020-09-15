@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/loginstyle.css">
+    <title>Login form</title>
+</head>
+<body>
+    <div class="main">
+        <form class="login100-form" action="/" method="GET" id="login_form">
+            <span class="login-form-title">
+                Account Login
+            </span>      
+            <div class="wrap-input100" data-validate="Username is required">
+                <label for="username">Username</label><br>
+                <input class="input100" type="text" name="username" id="username">
+            </div>    
+                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    <label class="label-checkbox100" for="ckb1">
+                        Remember me
+                    </label>
+                <div class="forgot">
+                    <a href="#">
+                        Forgot?
+                    </a>
+                </div>
+            <div class="container-login">
+                <button class="login100-form-btn" type="submit" value="Submit" form="login_form">
+                    Login
+                </button>
+            </div>
+        </form>
+
+
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

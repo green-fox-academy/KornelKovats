@@ -6,7 +6,15 @@ const PORT = 8080;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/static/index.html');
+  if (req.localStorage.username !== undefined) {
+    res.sendFile(`${__dirname}/public/static/index.html`);
+  } else {
+    res.redirect('/login');
+  }
+});
+
+app.get('/login', (req, res) => {
+  res.sendFile(`${__dirname}/public/static/login.html`);
 });
 
 app.listen(PORT, () => {

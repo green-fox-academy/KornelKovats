@@ -1,5 +1,6 @@
 // get all posts
 const getPosts = document.querySelector('.posts_body');
+let userName = localStorage.username;
 // console.log(getPosts);
 
 function reqListener() {
@@ -23,13 +24,13 @@ function loadPosts() {
   xhr.addEventListener('load', reqListener);
   xhr.open('GET', 'http://localhost:3000/api/posts');
   xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('username', 'Kornel');
+  xhr.setRequestHeader('username', userName);
   xhr.send();
 }
 loadPosts();
 
 function upVoting(element) {
-  const id = element.dataset.id;
+  const { id } = element.dataset;
   console.log(element.dataset.id);
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
@@ -45,13 +46,13 @@ function upVoting(element) {
       }
     }
   };
-  xhr.open('PUT', `http://localhost:3000/api/posts/${id}/upvotetest`);
+  xhr.open('PUT', `http://localhost:3000/api/posts/${id}/upvote`);
   xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('username', 'Kornel');
+  xhr.setRequestHeader('username', userName);
   xhr.send();
 }
 function downVoting(element) {
-  const id = element.dataset.id;
+  const { id } = element.dataset;
   console.log(element.dataset.id);
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
@@ -67,9 +68,9 @@ function downVoting(element) {
       }
     }
   };
-  xhr.open('PUT', `http://localhost:3000/api/posts/${id}/downvotetest`);
+  xhr.open('PUT', `http://localhost:3000/api/posts/${id}/downvote`);
   xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('username', 'Kornel');
+  xhr.setRequestHeader('username', userName);
   xhr.send();
 }
 
@@ -77,18 +78,9 @@ getPosts.addEventListener('click', (event) => {
   const classArray = event.target.className.split(' ');
   if (classArray[0] === 'upvote') {
     upVoting(event.target);
-  }else if(classArray[0] === 'downvote'){
+  } else if (classArray[0] === 'downvote') {
     downVoting(event.target);
   }
-
-  // const xhr = new XMLHttpRequest();
-  // xhr.onreadystatechange = upVoting();
-  /* const xhr = new XMLHttpRequest();
-  xhr.addEventListener('load', reqListener);
-  xhr.open('GET', 'http://localhost:3000/api/posts');
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.setRequestHeader('username', 'Kornel');
-  xhr.send(); */
 });
 
 function createPosts(posts) {
