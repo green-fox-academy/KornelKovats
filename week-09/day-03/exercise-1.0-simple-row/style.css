@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    background-color: #B02AFF;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    width:100%;
+    font-size: 2vw;
+    color: white;
+    font-family: arial;
+    grid-auto-rows: 200px;
+
+}
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+
+}
+.side{
+    background-color: #FFD62A;
+}
