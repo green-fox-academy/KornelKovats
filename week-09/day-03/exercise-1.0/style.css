@@ -1,0 +1,14 @@
+.container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.yellow{
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
+}
+.green{
+    width:100%;
+    height: 300px;
+    background-color: greenyellow;
+}
