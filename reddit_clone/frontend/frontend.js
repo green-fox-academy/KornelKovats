@@ -6,11 +6,12 @@ const PORT = 8080;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  if (req.localStorage.username !== undefined) {
+  /*if (req.localStorage.username !== undefined) {
     res.sendFile(`${__dirname}/public/static/index.html`);
   } else {
     res.redirect('/login');
-  }
+  }*/
+  res.sendFile(`${__dirname}/public/static/index.html`);
 });
 
 app.get('/login', (req, res) => {
