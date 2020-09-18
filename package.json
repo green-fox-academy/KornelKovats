@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "convert-to-words": "^1.3.5",
+    "cors": "^2.8.5",
     "number-to-words": "^1.2.4",
     "tape": "^5.0.1"
   }
