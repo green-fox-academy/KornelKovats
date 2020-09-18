@@ -35,7 +35,6 @@ h2{
     width: 70%;
     height: 50px;
     background: rgb(234,244,254);
-    background: linear-gradient(90deg, rgba(234,244,254,1) 0%, rgba(226,226,226,1) 46%, rgba(234,244,254,1) 100%);
     border: 1px solid black;
     border-radius: 3px;
 }
