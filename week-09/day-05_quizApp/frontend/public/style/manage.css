@@ -38,14 +38,24 @@ input {
   width: 60%;
   margin: 5px;
 }
-
+table{
+  height: 100%;
+}
+tr{
+  margin: 10px;
+  border: 1px solid #aaa;
+}
+td{
+  margin: 5px;
+  border: 1px solid #aaa;
+}
 .manage_container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   width: 450px;
-  height: 450px;
+  height: 100%;
   background-color: white;
   border-radius: 7px;
   border: 1px solid black;

@@ -4,15 +4,16 @@ const h1 = document.querySelector('h1');
 
 window.addEventListener('load', loadQuestion);
 
-card.addEventListener('click', (event) => {
+card.addEventListener('click', async (event) => {
   if (event.target.className === 'answer') {
     if (event.target.dataset.is_correct === '1') {
       score++;
       event.target.style.backgroundColor = '#A5FF91';
-      setTimeout(loadQuestion, 800);
+      let question = await setTimeout(loadQuestion, 800);
+      
     } else {
       event.target.style.backgroundColor = '#FF7878';
-      setTimeout(loadQuestion, 800);
+      let question = await setTimeout(loadQuestion, 800);
     }
   }
 });
