@@ -1,13 +1,14 @@
 const express = require('express');
-
-const PORT = 3000;
+const cors = require('cors');
+const router = require('./routes/index.js');
 
 const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
+app.use(express.json());
+app.use(cors());
+app.use(router);
 
-});
-
-app.listen(PORT, () => {
-  console.log(`Backend server running on port: ${PORT}`);
+app.listen(port, () => {
+  console.log(`Backend server running on port: ${port}`);
 });

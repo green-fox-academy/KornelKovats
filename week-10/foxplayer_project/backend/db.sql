@@ -14,3 +14,4 @@ CREATE TABLE tracks(
 		REFERENCES playlists(id)
 );
 
+INSERT INTO playlists (playlist,system_) VALUES("Favourites",1);
