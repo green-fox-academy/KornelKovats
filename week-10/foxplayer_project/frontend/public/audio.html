@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <audio controls>
+        <source src="./tracks/Organoid_-_09_-_Purple_Drift.mp3" type="audio/mpeg">
+    </audio>
+</body>
+<script>
+    let audio = document.querySelector('audio');
+    audio.addEventListener('loadstart',(event)=>{
+        console.log(event); 
+    })
+    audio.addEventListener('play',(event)=>{
+        console.log(event); 
+    })
+    audio.addEventListener('onended',(event)=>{
+        console.log(event); 
+    })
+    audio.addEventListener('progress',(event)=>{
+        console.log(event); 
+    })
+</script>
+</html>
