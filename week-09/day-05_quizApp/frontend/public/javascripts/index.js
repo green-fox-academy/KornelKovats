@@ -4,19 +4,36 @@ const h1 = document.querySelector('h1');
 
 window.addEventListener('load', loadQuestion);
 
-card.addEventListener('click', async (event) => {
+card.addEventListener('click', (event) => {
   if (event.target.className === 'answer') {
     if (event.target.dataset.is_correct === '1') {
       score++;
       event.target.style.backgroundColor = '#A5FF91';
-      let question = await setTimeout(loadQuestion, 800);
-      
     } else {
       event.target.style.backgroundColor = '#FF7878';
-      let question = await setTimeout(loadQuestion, 800);
     }
+    setTimeout(loadQuestion, 400);
   }
 });
+
+
+let promise = new Promise((resolve, reject) => {
+try {
+  let file = readFile('asdasd');
+  resolve(file);
+  }
+ catch (error) {
+  reject(error);
+
+})
+
+function loadFileData(){
+  promise()
+    .then(data=> console.log(data))
+    .catch(error=>console.log(error));
+    
+}
+
 
 function loadQuestion() {
   h1.innerText = `SCORE: ${score}`;

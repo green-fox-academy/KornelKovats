@@ -37,8 +37,6 @@ apiPostQuestion.post('/questions', (req, res) => {
       res.json(rows);
     })
   })
-
-  //res.end();
 });
 
 module.exports = apiPostQuestion;

@@ -8,7 +8,6 @@ function loadQuestion() {
   fetch('http://localhost:3000/api/questions')
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       data.forEach((element, index) => {
         const row = document.createElement('tr');
         const columnNumber = document.createElement('td');
@@ -34,7 +33,6 @@ function loadQuestion() {
 
 deletionContainer.addEventListener('click', (event) => {
   const { id } = event.target.dataset;
-  console.log(id);
   fetch(`http://localhost:3000/api/questions/${id}`, {
     method: 'DELETE',
     headers: {

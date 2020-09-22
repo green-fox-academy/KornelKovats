@@ -35,19 +35,21 @@ h2 {
     box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
 input {
-  width: 60%;
+  width: 100%;
   margin: 5px;
 }
 table{
   height: 100%;
 }
 tr{
+  height: 100%;
   margin: 10px;
-  border: 1px solid #aaa;
 }
 td{
   margin: 5px;
-  border: 1px solid #aaa;
+}
+.create_question{
+  height: 100%;
 }
 .manage_container {
   display: flex;
