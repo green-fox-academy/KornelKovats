@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Fox player</title>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">
+                <img src="./assets/foxplayer.png" id="logo">
+            </div>
+            <div class="artwork">
+                <img src="assets/music-placeholder.png" alt="album-artwork" id="artwork">
+            </div>
+            <h1>
+                Playlists 
+                <img src="./assets/plus-sign.png" alt="new-playlist" id="plus">
+            </h1>
+        </header>
+        <div class="playlists">
+            <div id="all-tracks">
+                All tracks
+            </div>
+            <div id="favorites">
+                Favorites
+            </div>
+        </div>
+        <aside>
+            <div class="current-title">
+                <div class="titles">
+                    <h2>House Sessions: Vol 2</h2>
+                    <h3>Fear N Loathing</h3>
+                </div>
+                <div class="icons">
+                    <img src="./assets/plus-sign.png" alt="add-track">
+                    <img src="./assets/star.svg" alt="set-favorite">
+                </div>
+            </div>
+            <div class="tracks">
+                <div class="track">
+                    <span id="number">1</span>
+                    <span id="name">Placeholder track</span>
+                    <span id="length">3:30</span>
+                </div>
+            </div>
+        </aside>
+        <footer>
+            <div class="control-panel">
+                <img src="./assets/rewind.svg" alt="rewind" id="rewind">
+                <img src="./assets/play.svg" alt="play" id="play">
+                <img src="./assets/forward.svg" alt="forward" id="forward">
+                <audio controls>
+                    <source src="./tracks/Organoid_-_09_-_Purple_Drift.mp3" type="audio/mpeg">
+                </audio>
+                <img src="./assets/shuffle.svg" alt="shuffle" id="shuffle">
+            </div>
+        </footer>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
